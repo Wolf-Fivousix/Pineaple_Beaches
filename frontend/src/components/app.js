@@ -10,9 +10,9 @@ const App = () => (
     <div>
         <NavBarContainer />
         <Switch>
-            <Route path="/" component={Splash} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            <Route path="/" component={Splash} />
         </Switch>
     </div>
 );
