@@ -1,4 +1,5 @@
 const express = require("express");
+const passport = require('passport');
 const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
@@ -15,12 +16,13 @@ mongoose
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 app.use(bodyParser.json());
 app.get("/", (request, response) => {
     const user = new User({
-        handle: "Wolf",
-        email: "wolfy",
+        username: "wolfy",
         password: "123"
     });
     user.save();
