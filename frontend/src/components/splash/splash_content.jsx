@@ -1,6 +1,6 @@
 import React from "react";
 
-class Howl extends React.Component {
+class SplashContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,20 +21,12 @@ class Howl extends React.Component {
 
     render() {
         return(
-            <div>
-                <h3>Howl to the Moon</h3>
-                <form>
-                    <label>
-                        Howl:
-                        <input
-                            onChange={this.handleInput("text")}
-                            type="text"/>
-                    </label>
-                    <button onClick={this.handleSubmit}>Howl</button>
-                </form>
+            <div className="splash-container">
+                <h3>Map goes here</h3>
+                <h3>Reviews go here</h3>
             </div>
         );
     }
 };
 
-export default Howl;
+export default SplashContent;
