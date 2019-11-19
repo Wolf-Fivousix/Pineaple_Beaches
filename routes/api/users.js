@@ -2,31 +2,27 @@ const express = require("express");
 const router = express.Router();
 const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
+const passport = require('passport');
 const keys = require("../../config/keys");
 const jwt = require("jsonwebtoken");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
-router.get("/test", (request, response) => {
-    response.json({ message: "This is the user route." });
-});
 
 router.post("/register", (request, response) => {
     const { errors, isValid } = validateRegisterInput(request.body);
-    
     if(!isValid) {
-        return response.status(400).json(errros);
+        return response.status(400).json(errors);
     }
 
-    User.findOne({ email: request.body.email })
+    User.findOne({ username: request.body.username })
         .then(user => {
             if (user) {
-                return response.status(400).json({ email: "Email has already been used" });
+                return response.status(400).json({ username: "Username has already been used" });
             }
             else {
                 const newUser = new User({
-                    handle: request.body.handle,
-                    email: request.body.email,
+                    username: request.body.username,
                     password: request.body.password
                 });
 
@@ -40,13 +36,22 @@ router.post("/register", (request, response) => {
                         if (error) throw error;
                         newUser.password = hashedPassword;
                         newUser.save()
-                            .then(user => response.json(user))
+                            .then(user => {
+                                const payload = { id: user.id, name: user.name };
+                  
+                                jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (error, token) => {
+                                  res.json({
+                                    success: true,
+                                    token: "Bearer " + token
+                                  });
+                                });
+                            })
                             .catch(error => console.log(error));
+                        });
                     });
-                });
             }
         });
-});
+    });
 
 router.post("/login", (request, response) => {
     const { errors, isValid } = validateLoginInput(request.body);
@@ -55,13 +60,13 @@ router.post("/login", (request, response) => {
         return response.status(400).json(errors);
     }
 
-    const email = request.body.email;
+    const username = request.body.username;
     const password = request.body.password;
 
-    User.findOne({ email })
+    User.findOne({ username })
         .then(user => {
             if(!user) {
-                return response.status(404).json({ email: "Invalid credentials" });
+                return response.status(404).json({ username: "Invalid credentials" });
             }
 
             bcrypt.compare(password, user.password)
@@ -69,8 +74,7 @@ router.post("/login", (request, response) => {
                     if(isMatch) {
                         const payload = {
                             id: user.id,
-                            handle: user.handle,
-                            email: user.email
+                            username: user.username
                         }
                         jwt.sign(
                             payload,
@@ -83,11 +87,19 @@ router.post("/login", (request, response) => {
                                 });
                             }
                         );
-                        return response.json({ message: "Success" });
-                    } 
-                    return response.status(400).json({ password: "Invalid credentials" })
+                    } else {
+                        errors.password = 'Invalid credentials';
+                        return response.status(400).json(errors);
+                    }
                 });
         });
 });
+
+router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
+    res.json({
+        id: req.user.id,
+        username: req.user.username
+    });
+})
 
 module.exports = router;
