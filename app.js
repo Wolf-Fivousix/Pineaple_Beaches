@@ -21,15 +21,6 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.use(bodyParser.json());
-app.get("/", (request, response) => {
-    const user = new User({
-        username: "wolfy",
-        password: "123"
-    });
-    user.save();
-    response.send("Hello Wolf Academy!");
-});
-
 app.use("/api/users", users);
 app.use("/api/reviews", reviews);
 

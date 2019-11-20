@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -18,9 +18,6 @@ class NavBar extends React.Component {
         if (this.props.loggedIn) {
             return (
                 <div className="greeting-container">
-                    <Link to={'/tweets'}>All Howls</Link>
-                    <Link to={'/profile'}>Profile</Link>
-                    <Link to={'/new_tweet'}>Howl a howl</Link>
                     <h3 className="welcome-message">Welcome, {this.props.currentUser.username}</h3>
                     <button className="logout-but" onClick={this.logoutUser}>Logout</button>
                 </div>
