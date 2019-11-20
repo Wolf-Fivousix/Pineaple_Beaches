@@ -6,7 +6,7 @@ const ReviewSchema = new Schema({
         type: Schema.Types.ObjectId,
         reference: "users"
     },
-    body: {
+    post: {
         type: String,
         required: true
     },
