@@ -1,0 +1,17 @@
+.beachIndexPlate {
+    background-color: #eaeaea;
+    border: 1px solid gray;
+    width: 90%;
+    margin: auto;
+    padding: 3px;
+    margin-top: 4px;
+}
+
+.searchBarField {
+    border: 1px solid black;
+    width: 60%;
+    font-size: 32px;
+    background-color: azure;
+    margin-left: 10px;
+    padding-left: 10px;
+}
