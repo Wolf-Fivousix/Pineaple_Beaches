@@ -1,16 +1,16 @@
 const Validator = require("validator");
 const validText = require("./valid-text");
 
-module.exports = function validateBeachInput(data) {
+module.exports = function validateReviewInput(data) {
     let errors = {};
 
     // BODY
-    data.body = validText(data.body) ? data.body : "";
-    if (!Validator.isLength(data.body, { min: 5, max: 500 })) {
-        errors.body = "Beach review must be between 5 & 500 characters";
+    data.post = validText(data.post) ? data.post : "";
+    if (!Validator.isLength(data.post, { min: 5, max: 500 })) {
+        errors.post = "Beach review must be between 5 & 500 characters";
     }
-    if (Validator.isEmpty(data.body)) {
-        errors.body = "You HAVE to say something...";
+    if (Validator.isEmpty(data.post)) {
+        errors.post = "You HAVE to say something...";
     }
 
     return {
