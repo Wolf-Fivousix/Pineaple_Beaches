@@ -64,22 +64,22 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input type="text"
+            <div className="login-form-container">
+                <form className="login-form" onSubmit={this.handleSubmit}>
+                    <div className="l-form-content">
+                        <input className="login-input" type="text"
                             value={this.state.username}
                             onChange={this.update('username')}
                             placeholder="Username"
                         />
                         <br />
-                        <input type="password"
+                        <input className="login-input" type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
                             placeholder="Password"
                         />
                         <br />
-                        <input type="submit" value="Submit" />
+                        <input className="login-submit" type="submit" value="Log In" />
                         {this.renderErrors()}
                     </div>
                 </form>
