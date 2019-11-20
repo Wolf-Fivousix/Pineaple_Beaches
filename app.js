@@ -4,8 +4,9 @@ const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
-const tweets = require("./routes/api/tweets");
 const bodyParser = require("body-parser");
+const Review = require("./models/Review");
+const reviews = require("./routes/api/reviews");
 const beaches = require("./routes/api/beaches");
 
 mongoose
@@ -21,9 +22,8 @@ require('./config/passport')(passport);
 
 app.use(bodyParser.json());
 app.use("/api/users", users);
+app.use("/api/reviews", reviews);
 app.use("/api/beaches", beaches);
-// app.use("/api/tweets", tweets);
-
 
 const port = process.env.PORT || 5000;
 
