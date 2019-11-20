@@ -1,4 +1,5 @@
 import React from "react";
+import SearchBarContainer from "../search/search_bar_container";
 
 class SplashContent extends React.Component {
     constructor(props) {
@@ -19,7 +20,10 @@ class SplashContent extends React.Component {
     render() {
         return(
             <div className="splash-container">
-                <h3>Map goes here</h3>
+                <section>
+                    <h3>Map goes here</h3>
+                    <SearchBarContainer />
+                </section>
                 <h3>Reviews go here</h3>
             </div>
         );
