@@ -1,4 +1,5 @@
 import React from "react";
+import GoogleApiWrapper from '../google_maps/google_api_wrapper';
 
 class SplashContent extends React.Component {
     constructor(props) {
@@ -19,7 +20,9 @@ class SplashContent extends React.Component {
     render() {
         return(
             <div className="splash-container">
-                <h3>Map goes here</h3>
+                <div className="map-container">
+                    <GoogleApiWrapper />
+                </div>
                 <h3>Reviews go here</h3>
             </div>
         );
