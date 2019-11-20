@@ -3,9 +3,6 @@ import React from "react";
 class SplashContent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            text: ""
-        };
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
