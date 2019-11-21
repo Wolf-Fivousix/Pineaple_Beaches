@@ -41,7 +41,7 @@ class GoogleApi extends React.Component {
             return keys.map((key, index) => {
                 return <Marker key={index} id={index} position={{
                     lat: this.props.beaches[key].lat,
-                    lng: this.props.beaches[key].lng
+                    lng: this.props.beaches[key].lon
                 }}
                 onClick = { this.onMarkerClick } />
             })
