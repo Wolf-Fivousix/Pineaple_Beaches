@@ -5,7 +5,7 @@ export const RECEIVE_BEACH_REVIEWS = 'RECEIVE_BEACH_REVIEWS';
 export const RECEIVE_NEW_REVIEW = 'RECEIVE_NEW_REVIEW';
 
 export const receiveUserReviews = reviews => ({
-    type: RECEIVE_REVIEWS,
+    type: RECEIVE_USER_REVIEWS,
     reviews
 });
 

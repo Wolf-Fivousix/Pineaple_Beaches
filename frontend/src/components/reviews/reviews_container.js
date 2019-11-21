@@ -3,16 +3,16 @@ import { fetchBeachReviews, fetchUserReviews } from '../../actions/review_action
 import Reviews from './reviews';
 
 const mSTP = (state) => {
+   
     return {
-        beachReviews: Object.values(state.reviews.beach),
-        userReviews: Object.values(state.reviews.user)
+        // beachReviews: Object.values(state.reviews.beach),
+        reviews: Object.values(state.entities.reviews.beach)
     };
 };
 
 const mDTP = dispatch => {
     return {
         fetchBeachReviews: () => dispatch(fetchBeachReviews()),
-        fetchUserReviews: () => dispatch(fetchUserReviews())
     };
 };
 

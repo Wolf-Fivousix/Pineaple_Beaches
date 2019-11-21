@@ -27,7 +27,7 @@ class Profile extends React.Component {
             <div>
               <h2>All of your Reviews</h2>
               {this.state.reviews.map(review => (
-                <ReviewBox key={review._id} text={review.text} />
+                <ReviewBox key={review._id} post={review.post} />
               ))}
             </div>
           );

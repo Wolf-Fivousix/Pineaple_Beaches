@@ -4,7 +4,7 @@ import Profile from './profile';
 
 const mapStateToProps = (state) => {
   return {
-    reviews: Object.values(state.reviews.user),
+    reviews: Object.values(state.entities.reviews.user),
     currentUser: state.session.user
   };
 };

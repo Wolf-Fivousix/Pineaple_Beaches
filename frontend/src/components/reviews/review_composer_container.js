@@ -5,7 +5,7 @@ import ReviewCompose from './review_compose';
 const mSTP = (state) => {
     return {
         currentUser: state.session.user,
-        newReview: state.reviews.new
+        newReview: state.entities.reviews.new
     };
 };
 

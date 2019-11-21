@@ -10,10 +10,12 @@ class Review extends React.Component {
             reviews: []
         }
     }
-
+    // componentWillMount() {
+    //     // this.props.fetchBeachReviews();
+    //     this.props.fetchUserReviews();
+    // }
     componentWillMount() {
         this.props.fetchBeachReviews();
-        this.props.fetchUserReviews();
     }
 
     componentWillReceiveProps(newState) {
@@ -21,6 +23,7 @@ class Review extends React.Component {
     }
 
     render() {
+
         if(this.state.reviews.length === 0) {
             return (<div>No Reviews at the moment</div>)
         } else {
@@ -28,7 +31,7 @@ class Review extends React.Component {
                 <div>
                     <h2>All Reviews</h2>
                     {this.state.reviews.map(review => (
-                        <ReviewBox key={review.id} post={review.post} />
+                        <ReviewBox key={review._id} post={review.post} />
                     ))}
                 </div>
             );
@@ -36,4 +39,4 @@ class Review extends React.Component {
     }
 }
 
-export default withRouter(review);
+export default withRouter(Review);
