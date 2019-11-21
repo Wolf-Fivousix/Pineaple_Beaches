@@ -1,5 +1,5 @@
 import React from "react";
-import GoogleApiWrapper from '../google_maps/google_api_wrapper';
+import GoogleApiContainer from '../google_maps/google_api_wrapper';
 import SearchBarContainer from "../search/search_bar_container";
 
 class SplashContent extends React.Component {
@@ -23,7 +23,7 @@ class SplashContent extends React.Component {
             <div className="splash-container">
                 <div className="map-container">
                     <SearchBarContainer />
-                    <GoogleApiWrapper />
+                    <GoogleApiContainer />
                 </div>
                 <h3>Reviews go here</h3>
             </div>
