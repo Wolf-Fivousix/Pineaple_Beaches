@@ -37,7 +37,7 @@ router.post("/register", (request, response) => {
                         newUser.password = hashedPassword;
                         newUser.save()
                             .then(user => {
-                                const payload = { id: user.id, name: user.name };
+                                const payload = { id: user.id, username: user.username };
                   
                                 jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (error, token) => {
                                   response.json({

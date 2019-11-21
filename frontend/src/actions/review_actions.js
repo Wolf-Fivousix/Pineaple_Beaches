@@ -1,4 +1,4 @@
-import { getReviews, getUserReviews, writeReview } from '../util/review_api_util';
+import { getBeachReviews, getUserReviews, writeReview } from '../util/review_api_util';
 
 export const RECEIVE_USER_REVIEWS = 'RECEIVE_USER_REVIEWS';
 export const RECEIVE_BEACH_REVIEWS = 'RECEIVE_BEACH_REVIEWS';
@@ -27,7 +27,7 @@ export const fetchBeachReviews = id => dispatch => (
 )
 
 export const fetchUserReviews = id => dispatch => (
-    getBeachReviews(id)
+    getUserReviews(id)
         .then(reviews => dispatch(receiveUserReviews(reviews)))
         .catch(error => console.log(error))
 )

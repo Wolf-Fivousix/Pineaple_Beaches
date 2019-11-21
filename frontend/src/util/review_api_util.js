@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { receiveBeachReviews } from '../actions/review_actions';
 
 export const getUserReviews = id => {
     return axios.get(`/api/reviews/user/${id}`)
