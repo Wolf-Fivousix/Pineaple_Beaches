@@ -1,5 +1,4 @@
 import React from "react";
-import BeachIndex from "../beaches/beaches_index";
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -23,35 +22,26 @@ class SearchBar extends React.Component {
     }
 
     render() {
-        const beachList = Object.values(this.props.beaches)
-                                .map((beach, index) => 
-                                    <li
-                                        className="beachIndexPlate"
-                                        key={index}>
-                                            <BeachIndex beach={beach}/>
-                                    </li>
-                                );
+        
         return (
-            <div>
-                <form>
-                <input
-                    className="searchBarField"
-                    type="text"
-                    placeholder="Search Beach"
-                    onChange={this.handleChange("search")}/>
+            <div className="search-bar-container">
+                <form className="search-bar-form">
+                    <input
+                        className="searchBarField"
+                        type="text"
+                        placeholder="Search Beach"
+                        onChange={this.handleChange("search")}/>
                     <button
-                        className="signup-but"
+                        className="search-but"
                         onClick={this.handleSubmit}>
                             Search
                     </button>
                     <button
                         type="button"
-                        className="signup-but"
-                        onClick={() => this.props.fetchAllBeaches()}>clear</button>
+                        className="clear-but"
+                        onClick={() => this.props.fetchAllBeaches()}>Clear
+                    </button>
                 </form>
-                <ul>
-                    {beachList}
-                </ul>
             </div>
         );
     }

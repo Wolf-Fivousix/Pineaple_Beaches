@@ -1,12 +1,12 @@
 import React from 'react';
-import SplashContent from "./splash_content";
+import SplashContentContainer from "./splash_content_container";
 
 class Splash extends React.Component {
 
     render() {
         return (
             <div className="splash-back">
-                <SplashContent />
+                <SplashContentContainer />
             </div>
         );
     }

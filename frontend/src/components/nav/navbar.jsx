@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBarContainer from "../search/search_bar_container";
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -36,6 +37,7 @@ class NavBar extends React.Component {
         return (
             <div className="main-nav">
                 <h1 className="nav-title">Pineapple Beach</h1>
+                <SearchBarContainer />
                 {this.getLinks()}
             </div>
         );

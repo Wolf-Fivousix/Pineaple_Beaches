@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleApiContainer from '../google_maps/google_api_wrapper';
-import SearchBarContainer from "../search/search_bar_container";
+import BeachIndex from "../beaches/beaches_index";
 
 class SplashContent extends React.Component {
     constructor(props) {
@@ -9,23 +9,37 @@ class SplashContent extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        this.props.fetchAllBeaches();
+    }
+
     handleInput(type) {
         return (e) => this.setState({ [type]: e.target.value });
     }
 
     handleSubmit(e) {
-        console.log(this.state);
         e.preventDefault();
     }
 
     render() {
+
+        const beachList = Object.values(this.props.beaches)
+                                .map((beach, index) => 
+                                    <li
+                                        className="beachIndexPlate"
+                                        key={index}>
+                                            <BeachIndex beach={beach}/>
+                                    </li>
+                                );
+
         return(
             <div className="splash-container">
+                <ul>
+                    {beachList}
+                </ul>
                 <div className="map-container">
-                    <SearchBarContainer />
                     <GoogleApiContainer />
                 </div>
-                <h3>Reviews go here</h3>
             </div>
         );
     }
