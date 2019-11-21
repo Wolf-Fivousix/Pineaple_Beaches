@@ -2,10 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const BeachSchema = new Schema({
-    user: {
-        type: Schema.Types.ObjectId,
-        reference: "users"
-    },
     name: {
         type: String,
         required: true
