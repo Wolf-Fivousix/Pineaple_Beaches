@@ -16,7 +16,7 @@
 .nav-title {
     margin-top: 10px;
     padding-left: 45px;
-    width: 270px;
+    width: 40%;
     font-weight: bold;
 }
 
@@ -26,54 +26,33 @@
     width: 240px;
 }
 
-.signup-but, .login-but, .logout-but,
-.clear-but, .search-but {
+.signup-but, .login-but, .logout-but {
     text-decoration: none;
     background-color: rgb(231, 171, 59);
     font-weight: bold;
     height: 30px;
     width: 50px;
+    margin-top: 8px;
     padding-top: 12px;
     font-size: 16px;
     border-radius: 4px;
 }
 
-.signup-but:hover, .login-but:hover, .logout-but:hover, 
-.clear-but:hover, .search-but:hover {
+.signup-but:hover, .login-but:hover, .logout-but:hover {
     cursor: pointer;
     background-color: rgb(238, 183, 80);
     color: rgb(226, 224, 224);
 }
 
 .signup-but {
-    margin-top: 8px;
     margin-left: 15px;
     padding-left: 15px;
     padding-right: 20px;
 }
 
 .login-but {
-    margin-top: 8px;
     margin-right: 35px;
     padding-left: 20px;
-    padding-right: 15px;
-}
-
-/* search buttons */
-
-.search-but, .clear-but {
-    margin-top: 8px;
-    padding-top: 6.5px;
-    padding-bottom: 6.5px;
-    margin-left: 22px;
-    padding-left: 15px;
-}
-
-.search-but {
-    padding-right: 20px;
-}
-
-.clear-but {
     padding-right: 15px;
 }
 

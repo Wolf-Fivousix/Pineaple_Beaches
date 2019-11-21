@@ -9,27 +9,9 @@
 
 .searchBarField {
     border: 1px solid black;
-    width: 75%;
-    height: 40px;
-    font-size: 25px;
+    width: 60%;
+    font-size: 32px;
     background-color: azure;
     margin-left: 10px;
-    margin-top: 9px;
     padding-left: 10px;
-    transition: 1s;
-}
-
-.searchBarField:focus {
-    background-color: white;
-}
-
-.search-bar-container {
-    border-right: 6px solid rgb(6, 18, 22);
-    padding-right: 64px;
-    width: 50%;
-    margin-right: 10px;
-}
-
-.search-bar-form {
-    display: flex;
 }
