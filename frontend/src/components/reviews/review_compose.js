@@ -9,6 +9,7 @@ class ReviewCompose extends React.Component {
             post:"",
             newReview:""
         }
+        
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -23,6 +24,7 @@ class ReviewCompose extends React.Component {
         };
         this.props.composeReview(review);
         this.setState({post: ''})
+        console.log(this.props)
     }
 
     update() {

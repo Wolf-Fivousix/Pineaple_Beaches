@@ -5,6 +5,7 @@ import ReviewCompose from './review_compose';
 const mSTP = (state) => {
     return {
         currentUser: state.session.user,
+        // currentBeach: state.entities.beaches,
         newReview: state.entities.reviews.new
     };
 };

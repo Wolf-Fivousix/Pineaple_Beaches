@@ -12,12 +12,13 @@ class SignupForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.clearedErrors = false;
+        // this.renderErrors = this.renderErrors.bind(this);
+        this.clearErrors = false;
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.signedIn === true) {
-            this.props.history.push('/');
+            this.props.history.push('/login');
         }
 
         this.setState({ errors: nextProps.errors })
