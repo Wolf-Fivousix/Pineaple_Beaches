@@ -9,7 +9,7 @@ import ReviewsContainer from './reviews/reviews_container';
 import ReviewComposeContainer from './reviews/review_composer_container';
 import ProfileContainer from './profile/profile_container';
 import Modal from './modal/modal';
-import BeachShow from "./beaches/beach_show";
+import BeachShowContainer from "./beaches/beach_show_container";
 
 const App = () => (
     <div className="app-container">
@@ -23,7 +23,7 @@ const App = () => (
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
             <ProtectedRoute exact path="/new_review" component={ReviewComposeContainer} />
 
-            <Route path="/beaches/:beach_id" component={BeachShow} />
+            <Route path="/beaches/:beach_id" component={BeachShowContainer} />
         </Switch>
     </div>
 );
