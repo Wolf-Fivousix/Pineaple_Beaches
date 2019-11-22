@@ -34,9 +34,11 @@ class SplashContent extends React.Component {
 
         return(
             <div className="splash-container">
-                <ul>
-                    {beachList}
-                </ul>
+                <div className="ul-container">
+                    <ul className="beach-ul-index">
+                        {beachList}
+                    </ul>
+                </div>
                 <div className="map-container">
                     <GoogleApiContainer />
                 </div>

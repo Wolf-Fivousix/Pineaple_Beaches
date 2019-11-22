@@ -1,11 +1,35 @@
+/* selection dropdown */
+
+.ul-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beach-ul-index {
+    display: flex;
+    width: 1400px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
 .beachIndexPlate {
     background-color: #eaeaea;
     border: 1px solid gray;
-    width: 90%;
+    width: 450px;
     margin: auto;
     padding: 3px;
-    margin-top: 4px;
+    margin-top: 8px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 8px;
 }
+
+.beach-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* search bar */
 
 .searchBarField {
     border: 1px solid black;
