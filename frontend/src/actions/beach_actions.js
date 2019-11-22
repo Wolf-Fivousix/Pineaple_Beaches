@@ -32,7 +32,10 @@ export const fetchBeachByName = (beachName) => dispatch => (
         .catch(errors => console.log(errors))
 );
 
-
+// export const fetchBeachById = (beachId) => dispatch => (
+//     beachUtils.fetchBeachById(beachId)
+//         .then
+// );
 
 
 // Helper methods to format the payload.
