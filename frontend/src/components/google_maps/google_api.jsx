@@ -35,7 +35,6 @@ class GoogleApi extends React.Component {
 
     displayMarkers = () => {
         if (this.props.beaches !== undefined) {
-            console.log("hi");
             const keys = Object.keys(this.props.beaches);
 
             return keys.map((key, index) => {
@@ -51,8 +50,8 @@ class GoogleApi extends React.Component {
     render() {
 
         const style = {
-            width: '50vw',
-            height: '75vh',
+            width: '60vw',
+            height: '85vh',
             'marginLeft': 'auto',
             'marginRight': 'auto'
         }
@@ -64,11 +63,11 @@ class GoogleApi extends React.Component {
                 style = { style }
                 google = { this.props.google }
                 onClick = { this.onMapClick }
-                zoom = { 6 }
+                zoom = { 10 }
                 initialCenter = {
                     {   
-                        lat: 36.117540,
-                        lng: -118.349624
+                        lat: 37.686703,
+                        lng: -122.449174
                     }
                 }
             >
