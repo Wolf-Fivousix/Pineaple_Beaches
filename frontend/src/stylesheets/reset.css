@@ -12,6 +12,7 @@ span, article, footer, time, small {
   outline: none;
   box-sizing: content-box;
   background: transparent;
+  text-decoration: none;
 }
 
 ol, ul, li {
