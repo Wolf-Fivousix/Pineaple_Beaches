@@ -44,6 +44,7 @@ class SignupForm extends React.Component {
 
         this.props.signup(user, this.props.history);
     }
+    
 
     renderErrors() {
         return (
@@ -58,11 +59,11 @@ class SignupForm extends React.Component {
     }   //come back later ^
 
     render() {
+       
         return (
             <div className="signup-form-container">
                 <form className="signup-form" onSubmit={this.handleSubmit}>
                     <div className="s-form-content">
-                        <br />
                         <input className="signup-input" type="text"
                             value={this.state.username}
                             onChange={this.update('username')}
