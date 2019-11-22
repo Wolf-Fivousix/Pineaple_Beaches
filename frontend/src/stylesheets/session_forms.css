@@ -1,0 +1,133 @@
+.login-content-container, .signup-content-container {
+    background-color: rgb(255, 255, 230);
+}
+
+.login-form-container, .signup-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 650px;
+}
+
+.login-form, .signup-form {
+    background-color: rgb(219, 247, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+    margin-right: 65px;
+    padding: 24px;
+    border-radius: 5px;
+    width: 272px;
+}
+
+.login-form {
+    height: 330px;
+}
+
+.signup-form {
+    height: 390px;
+}
+
+/* Form content */
+
+.login-label, .signup-label {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.login-label {
+    margin-left: 90px;
+}
+
+.signup-label {
+    margin-left: 85px;
+}
+
+.login-input, .signup-input {
+    width: 255px;
+    height: 30px;
+    border: 1px dashed black;
+    margin-bottom: 14px;
+    font-size: 17px;
+    padding-left: 15px;
+}
+
+.login-input:hover, .signup-input:hover,
+.login-input:focus, .signup-input:focus {
+    background-color: rgb(255, 255, 230);;
+    border: 1px dashed rgb(97, 196, 230);
+}
+
+.login-submit, .signup-submit {
+    width: 272px;
+    height: 40px;
+    background-color: rgb(231, 171, 59);
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-radius: 3px;
+}
+
+.login-submit:hover, .signup-submit:hover {
+    cursor: pointer;
+    background-color: rgb(238, 183, 80);
+    color: rgb(226, 224, 224);
+}
+
+.login-bottom-container, .signup-bottom-container {
+    display: flex;
+}
+
+.no-account, .already-account {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.no-account {
+    padding-left: 54px;
+}
+
+.already-account {
+    padding-left: 46px;
+}
+
+.to-signup, .to-login {
+    text-decoration: none;
+    background-color: rgb(49, 144, 220);
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: 68px;
+    font-size: 15px;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.to-signup {
+    margin-left: 68px;
+}
+
+.to-login {
+    margin-left: 75px;
+}
+
+.to-signup:hover, .to-login:hover {
+    cursor: pointer;
+    background-color: rgb(45, 148, 233);
+}
+
+/* Errors */
+
+.error-li {
+    background-color: rgb(249, 216, 220);
+    border-radius: 3px;
+    font-weight: normal;
+    font-size: 15.3px;
+    margin-top: 8px;
+    margin-bottom: -2px;
+    padding-left: 67px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
