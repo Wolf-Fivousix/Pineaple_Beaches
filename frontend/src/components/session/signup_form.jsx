@@ -91,4 +91,4 @@ class SignupForm extends React.Component {
     }
 }
 
-export default withRouterd(SignupForm);
+export default withRouter(SignupForm);
