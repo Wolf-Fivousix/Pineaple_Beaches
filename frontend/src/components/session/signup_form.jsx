@@ -45,6 +45,7 @@ class SignupForm extends React.Component {
 
         this.props.signup(user, this.props.history);
     }
+    
 
     renderErrors() {
         return (
@@ -59,6 +60,7 @@ class SignupForm extends React.Component {
     }
 
     render() {
+       
         return (
             <div className="signup-content-container">
                 <LogoNav />
