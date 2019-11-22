@@ -1,5 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+import LogoNav from '../nav/logonav';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -54,35 +55,46 @@ class LoginForm extends React.Component {
         return (
             <ul>
                 {Object.keys(this.state.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li className="error-li" key={`error-${i}`}>
                         {this.state.errors[error]}
                     </li>
                 ))}
             </ul>
         );
-    }   // come back to this last for both files
+    }
 
     render() {
         return (
-            <div className="login-form-container">
-                <form className="login-form" onSubmit={this.handleSubmit}>
-                    <div className="l-form-content">
-                        <input className="login-input" type="text"
-                            value={this.state.username}
-                            onChange={this.update('username')}
-                            placeholder="Username"
-                        />
-                        <br />
-                        <input className="login-input" type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            placeholder="Password"
-                        />
-                        <br />
-                        <input className="login-submit" type="submit" value={this.props.formType} />
-                        {this.renderErrors()}
-                    </div>
-                </form>
+            <div className="login-content-container">
+                <LogoNav />
+                <div className="login-form-container">
+                    <form className="login-form" onSubmit={this.handleSubmit}>
+                        <div className="l-form-content">
+                            <h1 className="login-label">Log In</h1>
+                            <br/>
+                            <input className="login-input" type="text"
+                                value={this.state.username}
+                                onChange={this.update('username')}
+                                placeholder="Username"
+                            />
+                            <br />
+                            <input className="login-input" type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                placeholder="Password"
+                            />
+                            <br />
+                            <input className="login-submit" type="submit" value={this.props.formType} />
+                            <br />
+                            <div className="login-bottom-content">
+                                <h3 className="no-account">Don't have an account?</h3>
+                                <Link className="to-signup" to="/signup">Sign Up Here!</Link>
+                            </div>
+                            <br/>
+                            {this.renderErrors()}
+                        </div>
+                    </form>
+                </div>
             </div>
         );
     }

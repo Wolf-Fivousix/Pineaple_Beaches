@@ -1,5 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+import LogoNav from '../nav/logonav';
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -49,42 +50,51 @@ class SignupForm extends React.Component {
         return (
             <ul>
                 {Object.keys(this.state.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li className="error-li" key={`error-${i}`}>
                         {this.state.errors[error]}
                     </li>
                 ))}
             </ul>
         );
-    }   //come back later ^
+    }
 
     render() {
         return (
-            <div className="signup-form-container">
-                <form className="signup-form" onSubmit={this.handleSubmit}>
-                    <div className="s-form-content">
-                        <br />
-                        <input className="signup-input" type="text"
-                            value={this.state.username}
-                            onChange={this.update('username')}
-                            placeholder="Username"
-                        />
-                        <br />
-                        <input className="signup-input" type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            placeholder="Password"
-                        />
-                        <br />
-                        <input className="signup-input" type="password"
-                            value={this.state.password2}
-                            onChange={this.update('password2')}
-                            placeholder="Confirm Password"
-                        />
-                        <br />
-                        <input className="signup-submit" type="submit" value="Sign Up" />
-                        {this.renderErrors()}
-                    </div>
-                </form>
+            <div className="signup-content-container">
+                <LogoNav />
+                <div className="signup-form-container">
+                    <form className="signup-form" onSubmit={this.handleSubmit}>
+                        <div className="s-form-content">
+                            <h1 className="signup-label">Sign Up</h1>
+                            <br/>
+                            <input className="signup-input" type="text"
+                                value={this.state.username}
+                                onChange={this.update('username')}
+                                placeholder="Username"
+                            />
+                            <br />
+                            <input className="signup-input" type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                placeholder="Password"
+                            />
+                            <br />
+                            <input className="signup-input" type="password"
+                                value={this.state.password2}
+                                onChange={this.update('password2')}
+                                placeholder="Confirm Password"
+                            />
+                            <br />
+                            <input className="signup-submit" type="submit" value="Sign Up" />
+                            <div className="signup-bottom-content">
+                                <h3 className="already-account">Already have an account?</h3>
+                                <Link className="to-login" to="/login">Log In Here!</Link>
+                            </div>
+                            <br/>
+                            {this.renderErrors()}
+                        </div>
+                    </form>
+                </div>
             </div>
         );
     }
