@@ -67,6 +67,7 @@ class SignupForm extends React.Component {
                 <div className="signup-form-container">
                     <form className="signup-form" onSubmit={this.handleSubmit}>
                         <div className="s-form-content">
+                            <Link className="back-arrow" to="/">&#8592;</Link>
                             <h1 className="signup-label">Sign Up</h1>
                             <br/>
                             <input className="signup-input" type="text"

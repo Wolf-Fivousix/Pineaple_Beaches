@@ -24,8 +24,8 @@ class BeachesIndex extends React.Component {
           <br />
           <li>{beach.description}</li>
           <li>Temp: {beach.temperature}</li>
-          <br />
-          <li>{time}</li>
+          {/* <br />
+          <li>{time}</li> */}
         </ul>
       </Link>
     );
