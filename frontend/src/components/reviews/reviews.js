@@ -15,7 +15,7 @@ class Review extends React.Component {
     //     this.props.fetchUserReviews();
     // }
     componentWillMount() {
-        this.props.fetchBeachReviews();
+        this.props.fetchBeachReviews(this.props.beach_id);
     }
 
     componentWillReceiveProps(newState) {
