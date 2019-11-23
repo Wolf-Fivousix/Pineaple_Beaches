@@ -14,14 +14,16 @@ class ReviewCompose extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState( {newReview: nextProps.newReview.post})
+        // this.setState( {newReview: nextProps.newReview.post})
     }
 
     handleSubmit(e) {
         e.preventDefault();
         let review = {
-            post: this.state.post
+            post: this.state.post,
+            beach: this.props.currentBeach
         };
+    
         this.props.composeReview(review);
         this.setState({post: ''})
         console.log(this.props)

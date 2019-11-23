@@ -32,8 +32,10 @@ export const fetchUserReviews = id => dispatch => (
         .catch(error => console.log(error))
 )
 
-export const composeReview = data => dispatch => (
+export const composeReview = data => dispatch => {
+    // debugger
+    return(
     writeReview(data)
         .then(review => dispatch(receiveNewReview(review)))
         .catch(error => console.log(error))
-)
+)}
