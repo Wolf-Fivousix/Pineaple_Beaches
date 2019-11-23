@@ -19,13 +19,13 @@ class BeachesIndex extends React.Component {
     return (
       <Link to={`/beaches/${beach._id}`}>
         <ul>
-          <li><h1>{beach.name}</h1></li>
+          <li><h1 className="beach-name">{beach.name}</h1></li>
           <li>{beach.location}</li>
           <br />
           <li>{beach.description}</li>
           <li>Temp: {beach.temperature}</li>
-          <br />
-          <li>{time}</li>
+          {/* <br />
+          <li>{time}</li> */}
         </ul>
       </Link>
     );
