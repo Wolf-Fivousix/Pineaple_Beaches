@@ -2,17 +2,18 @@ import { connect } from 'react-redux';
 import { fetchBeachReviews, fetchUserReviews } from '../../actions/review_actions';
 import Reviews from './reviews';
 
-const mSTP = (state) => {
-   
-    return {
+const mSTP = (state,ownProps) => {
+   console.log(ownProps)
+    return ({
         // beachReviews: Object.values(state.reviews.beach),
-        reviews: Object.values(state.entities.reviews.beach)
-    };
+        reviews: Object.values(state.entities.reviews.beach),
+        beach: ownProps.beach_id
+    });
 };
 
 const mDTP = dispatch => {
     return {
-        fetchBeachReviews: () => dispatch(fetchBeachReviews()),
+        fetchBeachReviews: (id) => dispatch(fetchBeachReviews(id)),
     };
 };
 
