@@ -70,6 +70,7 @@ class LoginForm extends React.Component {
                 <div className="login-form-container">
                     <form className="login-form" onSubmit={this.handleSubmit}>
                         <div className="l-form-content">
+                            <Link className="back-arrow" to="/">&#8592;</Link>
                             <h1 className="login-label">Log In</h1>
                             <br/>
                             <input className="login-input" type="text"

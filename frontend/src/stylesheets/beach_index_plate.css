@@ -11,10 +11,11 @@
     width: 1400px;
     flex-wrap: wrap;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .beachIndexPlate {
-    background-color: #eaeaea;
+    background-color: rgb(226, 255, 250);
     border: 1px solid gray;
     width: 450px;
     margin: auto;
@@ -37,7 +38,7 @@
     height: 40px;
     font-size: 25px;
     background-color: azure;
-    margin-left: 10px;
+    margin-left: -15px;
     margin-top: 9px;
     padding-left: 10px;
     transition: 1s;

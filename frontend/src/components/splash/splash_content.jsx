@@ -39,9 +39,8 @@ class SplashContent extends React.Component {
                         {beachList}
                     </ul>
                 </div>
-                <div className="map-container">
-                    <GoogleApiContainer />
-                </div>
+                <GoogleApiContainer />
+                <h1 className="trade-mark">®</h1>
             </div>
         );
     }
