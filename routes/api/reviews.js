@@ -27,11 +27,12 @@ router.post('/',
         if (!isValid) {
             return response.status(400).json(errors)
         }
-
+        // return response.json(request.body)
+        
         const newReview = new Review ({
             post: request.body.post,
             user: request.user.id,
-            // beach: request.beach.id
+            beach: request.body.beach
         });
 
         newReview.save().then(review => response.json(review));

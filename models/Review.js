@@ -7,6 +7,11 @@ const ReviewSchema = new Schema({
         reference: "users"
     },
 
+    beach: {
+        type: Schema.Types.ObjectId,
+        references: "beaches"
+    },
+
     post: {
         type: String,
         required: true
