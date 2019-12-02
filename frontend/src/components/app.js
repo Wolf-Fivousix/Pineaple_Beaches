@@ -11,6 +11,14 @@ import ProfileContainer from './profile/profile_container';
 import Modal from './modal/modal';
 import BeachShowContainer from "./beaches/beach_show_container";
 
+const path = require('path');
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('frontend/build'));
+    app.get('/', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+    })
+}
+
 const App = () => (
     <div className="app-container">
         <Modal/>
