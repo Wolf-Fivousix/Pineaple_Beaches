@@ -34,7 +34,10 @@ export const fetchBeachByName = (beachName) => dispatch => (
 
 // export const fetchBeachById = (beachId) => dispatch => (
 //     beachUtils.fetchBeachById(beachId)
-//         .then
+//         .then(payload => {
+
+//         })
+//         .catch(errors => console.log(errors))
 // );
 
 

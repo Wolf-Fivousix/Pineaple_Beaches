@@ -56,17 +56,18 @@
 .signup-but, .login-but, .logout-but,
 .clear-but, .search-but, .review-submit {
     text-decoration: none;
-    background-color: rgb(231, 171, 59);
+    background-color: rgb(255, 183, 50);
     font-weight: bold;
     height: 30px;
     width: 50px;
     padding-top: 12px;
     font-size: 16px;
     border-radius: 4px;
+    z-index: 2;
 }
 
 .signup-but:hover, .login-but:hover, .logout-but:hover, 
-.clear-but:hover, .search-but:hover, .review-submit:hover {
+.clear-but:hover, .search-but:hover {
     cursor: pointer;
     background-color: rgb(238, 183, 80);
     color: rgb(226, 224, 224);

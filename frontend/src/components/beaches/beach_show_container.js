@@ -10,7 +10,10 @@ const mapStateToProps = (state, ownProps) => {
 })};
 
 const mapDispatchToProps = dispatch => ({
-
+    
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BeachShow);
+export default connect(
+    mapStateToProps, 
+    mapDispatchToProps
+)(BeachShow);

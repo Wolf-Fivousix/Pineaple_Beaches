@@ -75,7 +75,7 @@
 .login-submit, .signup-submit {
     width: 272px;
     height: 40px;
-    background-color: rgb(231, 171, 59);
+    background-color: rgb(250, 184, 61);
     font-size: 16px;
     font-weight: 600;
     color: white;
@@ -84,8 +84,8 @@
 
 .login-submit:hover, .signup-submit:hover {
     cursor: pointer;
-    background-color: rgb(238, 183, 80);
-    color: rgb(226, 224, 224);
+    background-color: rgb(255, 193, 78);
+    color: rgb(236, 236, 236);
 }
 
 .login-bottom-container, .signup-bottom-container {

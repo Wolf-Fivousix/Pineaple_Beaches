@@ -31,8 +31,20 @@
     background-color: rgb(226, 255, 250);
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 8px;
     width: 420px;
-    padding: 20px;
+    padding-top: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     border-radius: 3px;
+    justify-content: center;
+}
+
+.add-review {
+    font-size: 22px;
+    font-weight: bold;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .r-texta-container {
@@ -48,8 +60,6 @@
     height: 80px;
     width: 100%;
     transition: 1s;
-    word-wrap: break-word;
-    word-break: break-all;
 }
 
 .review-textarea:focus {
@@ -57,10 +67,17 @@
 }
 
 .review-submit {
+    background-color: rgb(255, 189, 65);
     padding-top: 8px;
     margin-top: 25px;
     margin-left: 15px;
     padding-left: 15px;
     padding-right: 20px;
     padding-bottom: 5px;
+}
+
+.review-submit:hover {
+    cursor: pointer;
+    background-color: rgb(255, 187, 61);
+    color: rgb(235, 233, 233);
 }

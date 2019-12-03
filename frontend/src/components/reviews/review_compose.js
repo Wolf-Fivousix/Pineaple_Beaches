@@ -1,5 +1,5 @@
 import React from 'react';
-import ReviewBox from './review_box';
+import { Link } from 'react-router-dom';
 
 class ReviewCompose extends React.Component {
     constructor(props) {
@@ -38,7 +38,9 @@ class ReviewCompose extends React.Component {
     render() {
         return (
             <div className="review-form-container">
-                <form className="review-form" onSubmit={this.handleSubmit}> 
+                <form className="review-form" onSubmit={this.handleSubmit}>
+                    <Link className="back-arrow" to="/">&#8592;</Link>
+                    <h1 className="add-review">Add Review</h1>
                     <div className="r-texta-container">
                         <textarea className="review-textarea"
                             value={this.state.post}
@@ -48,8 +50,6 @@ class ReviewCompose extends React.Component {
                         <input className="review-submit" type="submit" value="Submit" />
                     </div>
                 </form>
-                <br/>
-                <ReviewBox text={this.state.newReview} />
             </div>
         )
     }

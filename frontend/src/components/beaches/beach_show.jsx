@@ -1,6 +1,4 @@
 import React from "react";
-import ReviewBox from "../reviews/review_box";
-import { Link } from 'react-router-dom';
 import ReviewComposeContainer from '../reviews/review_composer_container';
 import ReviewsContainer from '../reviews/reviews_container';
 import axios from 'axios';
@@ -20,9 +18,9 @@ class BeachShow extends React.Component {
             date: 0
         };
     }
+
     componentDidMount() {
         console.log("mounted");
-        // debugger
     }
     
     updateWeatherData() {
@@ -47,8 +45,12 @@ class BeachShow extends React.Component {
         return (
             <div className="beach-show-container">
                 <NavBarContainer/>
+                <h1 className="beach-show-name">{
+                    // need to get name of beach
+                }</h1>
                 <ReviewsContainer beach_id={beach_id}/>
                 <ReviewComposeContainer beach_id={beach_id}/>
+                <h1 className="trade-mark-reviews">®</h1>
             </div>
         );
     }
