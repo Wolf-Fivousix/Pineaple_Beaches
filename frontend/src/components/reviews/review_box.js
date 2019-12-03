@@ -3,9 +3,7 @@ import React from 'react';
 class ReviewBox extends React.Component {
     render() {
         return (
-            <div>
-                <h1>{this.props.post}</h1>
-            </div>
+            <li className="single-review">{this.props.post}</li>
         )
     }
 }

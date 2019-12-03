@@ -37,15 +37,15 @@ class ReviewCompose extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}> 
-                    <div>
-                        <input type="textarea"
+            <div className="review-form-container">
+                <form className="review-form" onSubmit={this.handleSubmit}> 
+                    <div className="r-texta-container">
+                        <textarea className="review-textarea"
                             value={this.state.post}
                             onChange={this.update()}
-                            placeholder="How was the Beach...?"
-                        />
-                        <input type="submit" value="Submit" />
+                            placeholder="How was the Beach...?">
+                        </textarea>
+                        <input className="review-submit" type="submit" value="Submit" />
                     </div>
                 </form>
                 <br/>

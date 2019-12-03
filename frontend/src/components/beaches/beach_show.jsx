@@ -45,18 +45,10 @@ class BeachShow extends React.Component {
             beach_id = this.props.beach._id
         }
         return (
-            <div>
+            <div className="beach-show-container">
                 <NavBarContainer/>
-                <p>This is a beach page, yay! =)</p>
-            <ReviewsContainer beach_id={beach_id}/>
-            <ReviewComposeContainer beach_id={beach_id}/>
-                <br/>
-                <br/>
-                <br/>
-                <p>This is a beach page, yay! =)</p>
-                <button className="signup-but"
-                    onClick={this.updateWeatherData.bind(this)}
-                >CLICK MEEEEE =)</button>
+                <ReviewsContainer beach_id={beach_id}/>
+                <ReviewComposeContainer beach_id={beach_id}/>
             </div>
         );
     }

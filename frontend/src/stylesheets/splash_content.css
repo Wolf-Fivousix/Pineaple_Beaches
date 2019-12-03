@@ -1,9 +1,10 @@
 /* Google Map */
 
-.splash-container {
+.splash-container, .beach-show-container {
     background-color: rgb(255, 255, 230);
 }
 
 .trade-mark {
     margin-top: 670px;
+    font-size: 28px;
 }

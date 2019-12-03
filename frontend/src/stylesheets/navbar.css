@@ -54,7 +54,7 @@
 }
 
 .signup-but, .login-but, .logout-but,
-.clear-but, .search-but {
+.clear-but, .search-but, .review-submit {
     text-decoration: none;
     background-color: rgb(231, 171, 59);
     font-weight: bold;
@@ -66,7 +66,7 @@
 }
 
 .signup-but:hover, .login-but:hover, .logout-but:hover, 
-.clear-but:hover, .search-but:hover {
+.clear-but:hover, .search-but:hover, .review-submit:hover {
     cursor: pointer;
     background-color: rgb(238, 183, 80);
     color: rgb(226, 224, 224);
