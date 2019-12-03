@@ -143,13 +143,10 @@
     margin-bottom: -2px;
     padding-top: 9px;
     padding-bottom: 9px;
-}
-
-.error-login {
-    padding-left: 67px;
+    text-align: center;
 }
 
 .error-signup {
-    padding-left: 22px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

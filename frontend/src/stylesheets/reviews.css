@@ -1,22 +1,58 @@
 /* no review */
 
-.no-reviews-container {
+.no-reviews-container, .show-reviews-container {
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
 
-.no-r-title {
+.no-r-title, .all-r-title {
     background-color: rgb(226, 255, 250);
-    box-shadow: rgba(0, 0, 0, 0.2) 0 0 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
     font-size: 25px;
     font-weight: bold;
     border-radius: 3px;
+    padding-bottom: 12px;
+}
+
+.no-r-title {
     width: 320px;
     padding-top: 12px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 12px;
+}
+
+/* all reviews */
+
+.all-r-title {
+    width: 190px;
+    padding-top: 12px;
+    padding-left: 50px;
+}
+
+.ul-r-container {
+    margin-top: 20px;
+}
+
+.ul-reviews {
+    background-color: rgb(226, 255, 250);
+    border-radius: 3px;
+    display: flex;
+    width: 900px;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
+    padding-bottom: 15px;
+}
+
+.single-review {
+    background-color: rgb(236, 219, 255);
+    text-align: center;
+    border-radius: 5px;
+    width: 390px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
 }
 
 /* review-form */
@@ -24,12 +60,12 @@
 .review-form-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 22px;
 }
 
 .review-form {
     background-color: rgb(226, 255, 250);
-    box-shadow: rgba(0, 0, 0, 0.2) 0 0 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
     width: 420px;
     padding-top: 6px;
     padding-left: 20px;

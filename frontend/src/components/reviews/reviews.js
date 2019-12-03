@@ -28,13 +28,17 @@ class Review extends React.Component {
             )
         } else {
             return (
-                <div className="show-reviews">
-                    <h2 className="all-r">All Reviews</h2>
-                    <ul className="ul-reviews">
-                        {this.state.reviews.map(review => (
-                            <ReviewBox key={review._id} post={review.post} />
-                        ))}
-                    </ul>
+                <div>
+                    <div className="show-reviews-container">
+                        <h1 className="all-r-title">All Reviews</h1>
+                    </div>
+                    <div className="ul-r-container">
+                        <ul className="ul-reviews">
+                            {this.state.reviews.map(review => (
+                                <ReviewBox key={review._id} post={review.post} />
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             );
         }
