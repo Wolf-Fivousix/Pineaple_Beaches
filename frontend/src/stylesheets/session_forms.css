@@ -68,7 +68,7 @@
 
 .login-input:hover, .signup-input:hover,
 .login-input:focus, .signup-input:focus {
-    background-color: rgb(255, 255, 230);;
+    background-color: rgb(255, 255, 230);
     border: 1px dashed rgb(97, 196, 230);
 }
 

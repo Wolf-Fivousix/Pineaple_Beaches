@@ -2,7 +2,7 @@ import React from "react";
 import ReviewComposeContainer from '../reviews/review_composer_container';
 import ReviewsContainer from '../reviews/reviews_container';
 import axios from 'axios';
-import NavBarContainer from "../nav/navbar_container";
+import ReviewNavbarContainer from "../nav/review_navbar_container";
 
 class BeachShow extends React.Component {
     constructor(props) {
@@ -44,7 +44,7 @@ class BeachShow extends React.Component {
         }
         return (
             <div className="beach-show-container">
-                <NavBarContainer/>
+                <ReviewNavbarContainer/>
                 <h1 className="beach-show-name">{
                     // need to get name of beach
                 }</h1>

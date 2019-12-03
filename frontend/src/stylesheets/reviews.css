@@ -89,17 +89,17 @@
 }
 
 .review-textarea {
-    border: 1px solid black;
+    border: 1px dashed black;
     background-color: rgb(255, 255, 236);
     font-size: 15.5px;
     padding: 8px;
     height: 80px;
     width: 100%;
-    transition: 1s;
 }
 
-.review-textarea:focus {
+.review-textarea:hover, .review-textarea:focus {
     background-color: white;
+    border: 1px dashed rgb(97, 196, 230);
 }
 
 .review-submit {

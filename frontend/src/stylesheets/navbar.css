@@ -1,11 +1,11 @@
 /* Navbar */
 
-.main-nav, .auth-container, .greeting-container {
+.main-nav, .auth-container, .greeting-container, .review-nav {
     display: flex;
     justify-content: space-between;
 }
 
-.main-nav, .logo-nav {
+.main-nav, .logo-nav, .review-nav, .logo-r-container {
     width: auto;
     height: 60px;
     z-index: 2;
@@ -13,18 +13,22 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 30px;
 }
 
-.logo-nav {
+.logo-nav, .logo-r-container {
     display: flex;
 }
 
-.nav-title, .logo-title {
+.logo-r-container {
+    box-shadow: none;
+}
+
+.nav-title, .logo-title, .logo-title-r {
     font-size: 32px;
     margin-top: 10px;
     width: 270px;
     font-weight: bold;
 }
 
-.logo-title {
+.logo-title, .logo-title-r {
     margin-left: 31px;
 }
 
@@ -108,15 +112,13 @@
 /* when logged in */
 
 .greeting-container {
-    width: 320px;
+    width: 240px;
 }
 
 .welcome-message {
     color: white;
     font-size: 22px;
     margin-top: 18px;
-    margin-left: 10px;
-    width: 80%;
 }
 
 .logout-but {
@@ -127,3 +129,6 @@
     padding-left: 15px;
     padding-right: 20px;
 }
+
+/* review navbar */
+
