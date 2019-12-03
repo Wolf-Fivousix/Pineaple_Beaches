@@ -22,28 +22,22 @@ class BeachShow extends React.Component {
         };
     }
     componentDidMount() {
-        console.log("mounted");
-        // debugger
         this.props.fetchBeachById(this.props.match.params.beach_id)
-            .then(beach => {
-                this.setState(beach);
-            })
+            .then(beach => this.setState(beach))
+            .then(() => this.updateWeatherData())
             .catch(errors => console.log("ID Fetch failed"))
     }
     
     updateWeatherData() {
-        console.log("Updating data...");
+        // Update if more than 1 hour since last update.
         const timeDifference = (Date.now() - new Date(this.state.date).getTime()) / 1000 / 60;
-        console.log(Math.floor(timeDifference));
-        // It has been more than 1 hour since last update.
         if (Math.floor(timeDifference) > 60) {
-            console.log("Update beep boop");
             axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.props.beach.lat}&lon=${this.props.beach.lon}&appid=${weatherAPIKey}`)
                 .then(response => {
                     // Prioritize updating the user.
                     this.setState({
                         temperature: response.data.main.temp,
-                        date: "Date.now()"
+                        date: Date.now()
                     });
                     // Now update the database.
                     // debugger;
@@ -55,9 +49,7 @@ class BeachShow extends React.Component {
                     this.props.updateBeachTemperature(payload);
                 })
                 .catch(errors => console.log(errors));
-
         }
-        else console.log("No update needed");
     }
 
 
