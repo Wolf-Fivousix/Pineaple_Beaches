@@ -19,11 +19,11 @@ class GoogleApi extends React.Component {
     componentDidMount() {
         this.props.fetchAllBeaches();
     }
-
+    
     onMarkerClick = (props, marker, e) => {
         this.setState({
             selectedPlace: props,
-            activeMarker: marker
+            activeMarker: marker,
         });
     }
 

@@ -26,7 +26,7 @@ function Modal({modal, closeModal}) {
             </div>
         </div>
     )
-    }
+}
     const mSTP = state => {
         return {
             modal: state.ui.modal
