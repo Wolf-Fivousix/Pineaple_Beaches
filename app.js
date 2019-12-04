@@ -5,9 +5,16 @@ const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
 const bodyParser = require("body-parser");
-const Review = require("./models/Review");
 const reviews = require("./routes/api/reviews");
 const beaches = require("./routes/api/beaches");
+const path = require('path');
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('frontend/build'));
+    app.get('/', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+    })
+}
 
 mongoose
     .connect(db, { useNewUrlParser: true })

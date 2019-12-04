@@ -1,7 +1,9 @@
 import * as beachUtils from "../util/beach_api_util";
+import { RECEIVE_BEACH_REVIEWS } from "./review_actions";
 
 export const RECEIVE_ALL_BEACHES = "RECEIVE_ALL_BEACHES";
 export const RECEIVE_NAMED_BEACHES = "RECEIVE_NAMED_BEACHES";
+export const RECEIVE_BEACH = "RECEIVE_BEACH";
 
 const receiveAllBeaches = (beaches) => ({
     type: RECEIVE_ALL_BEACHES,
@@ -12,6 +14,11 @@ const receiveNamedBeaches = (beaches) => ({
     type: RECEIVE_NAMED_BEACHES,
     beaches
 });
+
+const receiveBeach = (beach) => ({
+    type: RECEIVE_BEACH,
+    beach
+})
 
 export const fetchAllBeaches = () => dispatch => (
     beachUtils.fetchAllBeaches()
@@ -32,11 +39,21 @@ export const fetchBeachByName = (beachName) => dispatch => (
         .catch(errors => console.log(errors))
 );
 
-// export const fetchBeachById = (beachId) => dispatch => (
-//     beachUtils.fetchBeachById(beachId)
-//         .then
-// );
+export const fetchBeachById = (beachId) => dispatch => (
+    beachUtils.fetchBeachById(beachId)
+        .then(beach => {
+            beach = formatDataById(beach);
+            dispatch(receiveBeach(beach));
+            return beach[Object.keys(beach)[0]];
+        })
+        .catch(errors => console.log(errors))
+);
 
+export const updateBeachTemperature = (payload) => dispatch => (
+    beachUtils.updateBeachTemperature(payload)
+        .then(() => console.log("Success"))
+        .catch(errors => console.log(errors))
+);
 
 // Helper methods to format the payload.
 function formatDataAsIdKeys(payload) {
@@ -62,3 +79,8 @@ function reduceByName(beaches, name) {
 
     return filteredBeaches;
 };
+
+function formatDataById(payload) {
+    const id = payload.data._id;
+    return { [id]: payload.data };
+}
