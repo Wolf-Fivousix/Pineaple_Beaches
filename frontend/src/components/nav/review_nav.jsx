@@ -1,5 +1,4 @@
 import React from 'react';
-import LogoNav from './logonav';
 import { Link } from 'react-router-dom';
 
 class ReviewNavbar extends React.Component {
@@ -32,6 +31,9 @@ class ReviewNavbar extends React.Component {
                     <Link className="pine-icon-left" to="/">&#127821;</Link>
                     <Link className="logo-title-r" to="/">Pineapple Beach</Link>
                     <Link className="logo-pine-icon-right" to="/">&#127821;</Link>
+                </div>
+                <div className="line-container">
+                    <h1 className="dashed-line"></h1>
                 </div>
                 {this.getLinks()}
             </div>

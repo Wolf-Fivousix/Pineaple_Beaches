@@ -132,3 +132,9 @@
 
 /* review navbar */
 
+.dashed-line {
+    border-right: 4px dotted rgb(6, 18, 22);
+    width: 1px;
+    height: 60px;
+    margin-left: 760px;
+}
