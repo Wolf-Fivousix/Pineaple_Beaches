@@ -68,19 +68,33 @@ class BeachShow extends React.Component {
         if (this.props.beach) {
             beach_id = this.props.beach._id
         }
-        
-        return (
-            <div className="beach-show-container">
-                <ReviewNavbarContainer/>
-                <h1 className="beach-show-name">{
-                    // need to get name of beach
-                }</h1>
-                <ReviewsContainer beach_id={beach_id}/>
-                <ReviewComposeContainer beach_id={beach_id}/>
-                <p>Temperature is: {tempCelsius + " Celsius and " + tempFahrenheit + " Fahrenheit"}</p>
-                <h1 className="trade-mark-reviews">®</h1>
-            </div>
-        );
+
+        if (this.props.loggedIn) {
+            return (
+                <div className="beach-show-container">
+                    <ReviewNavbarContainer/>
+                    <h1 className="beach-show-name">{
+                        // need to get name of beach
+                    }</h1>
+                    <ReviewsContainer beach_id={beach_id}/>
+                    <ReviewComposeContainer beach_id={beach_id}/>
+                    <p>Temperature is: {tempCelsius + " Celsius and " + tempFahrenheit + " Fahrenheit"}</p>
+                    <h1 className="trade-mark-reviews">®</h1>
+                </div>
+            );
+        } else {
+            return (
+                <div className="beach-show-container">
+                    <ReviewNavbarContainer/>
+                    <h1 className="beach-show-name">{
+                        // need to get name of beach
+                    }</h1>
+                    <ReviewsContainer beach_id={beach_id}/>
+                    <p>Temperature is: {tempCelsius + " Celsius and " + tempFahrenheit + " Fahrenheit"}</p>
+                    <h1 className="trade-mark-reviews">®</h1>
+                </div>
+            );
+        }
     }
 };
 
