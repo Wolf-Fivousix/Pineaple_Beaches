@@ -22,7 +22,19 @@ export const receiveNewReview = review => ({
 
 export const fetchBeachReviews = id => dispatch => (
     getBeachReviews(id)
-        .then(reviews => dispatch(receiveBeachReviews(reviews)))
+        .then(reviews =>
+                {
+                    const ids = reviews.data.map(review => review._id)
+                    const revs = {}
+                    for (let i = 0; i < ids.length; i++) {
+                        revs[ids[i]] = reviews.data[i]
+                    }
+                    // debugger
+                    return  dispatch(receiveBeachReviews(revs))
+                }
+
+                
+            )
         .catch(error => console.log(error))
 )
 
