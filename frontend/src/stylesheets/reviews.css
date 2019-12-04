@@ -1,0 +1,119 @@
+/* no review */
+
+.no-reviews-container, .show-reviews-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.no-r-title, .all-r-title {
+    background-color: rgb(226, 255, 250);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding-bottom: 12px;
+}
+
+.no-r-title {
+    width: 320px;
+    padding-top: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* all reviews */
+
+.all-r-title {
+    width: 190px;
+    padding-top: 12px;
+    padding-left: 50px;
+}
+
+.ul-r-container {
+    margin-top: 20px;
+}
+
+.ul-reviews {
+    background-color: rgb(226, 255, 250);
+    border-radius: 3px;
+    display: flex;
+    width: 900px;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
+    padding-bottom: 15px;
+}
+
+.single-review {
+    background-color: rgb(236, 219, 255);
+    text-align: center;
+    border-radius: 5px;
+    width: 390px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+}
+
+/* review-form */
+
+.review-form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.review-form {
+    background-color: rgb(226, 255, 250);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
+    width: 420px;
+    padding-top: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 3px;
+    justify-content: center;
+}
+
+.add-review {
+    font-size: 22px;
+    font-weight: bold;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.r-texta-container {
+    display: flex;
+    justify-content: center;
+}
+
+.review-textarea {
+    border: 1px dashed black;
+    background-color: rgb(255, 255, 236);
+    font-size: 15.5px;
+    padding: 8px;
+    height: 80px;
+    width: 100%;
+}
+
+.review-textarea:hover, .review-textarea:focus {
+    background-color: white;
+    border: 1px dashed rgb(97, 196, 230);
+}
+
+.review-submit {
+    background-color: rgb(255, 189, 65);
+    padding-top: 8px;
+    margin-top: 25px;
+    margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+.review-submit:hover {
+    cursor: pointer;
+    background-color: rgb(255, 187, 61);
+    color: rgb(235, 233, 233);
+}

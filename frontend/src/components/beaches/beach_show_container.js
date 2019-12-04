@@ -15,4 +15,7 @@ const mapDispatchToProps = dispatch => ({
     updateBeachTemperature: (payload) => dispatch(updateBeachTemperature(payload))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BeachShow);
+export default connect(
+    mapStateToProps, 
+    mapDispatchToProps
+)(BeachShow);
