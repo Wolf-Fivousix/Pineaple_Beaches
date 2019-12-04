@@ -20,7 +20,7 @@ router.get(`/:beach_id`, (request, response) => {
 });
 
 router.patch(`/:beach_id`, (request, response) => {
-    Beach.updateOne({ _id: request.params.beach_id }, { temperature: request.body.temperature })
+    Beach.updateOne({ _id: request.params.beach_id }, { temperature: request.body.temperature, date: request.body.date })
         .then((beach) => response.json(beach[0]))
         .catch((errors) => console.log(errors));
 });

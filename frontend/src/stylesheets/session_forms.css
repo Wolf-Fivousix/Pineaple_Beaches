@@ -68,14 +68,14 @@
 
 .login-input:hover, .signup-input:hover,
 .login-input:focus, .signup-input:focus {
-    background-color: rgb(255, 255, 230);;
+    background-color: rgb(255, 255, 230);
     border: 1px dashed rgb(97, 196, 230);
 }
 
 .login-submit, .signup-submit {
     width: 272px;
     height: 40px;
-    background-color: rgb(231, 171, 59);
+    background-color: rgb(250, 184, 61);
     font-size: 16px;
     font-weight: 600;
     color: white;
@@ -84,8 +84,8 @@
 
 .login-submit:hover, .signup-submit:hover {
     cursor: pointer;
-    background-color: rgb(238, 183, 80);
-    color: rgb(226, 224, 224);
+    background-color: rgb(255, 193, 78);
+    color: rgb(236, 236, 236);
 }
 
 .login-bottom-container, .signup-bottom-container {
@@ -134,14 +134,19 @@
 
 /* Errors */
 
-.error-li {
+.error-login, .error-signup {
     background-color: rgb(249, 216, 220);
     border-radius: 3px;
     font-weight: normal;
     font-size: 15.3px;
     margin-top: 8px;
     margin-bottom: -2px;
-    padding-left: 67px;
     padding-top: 9px;
     padding-bottom: 9px;
+    text-align: center;
+}
+
+.error-signup {
+    padding-left: 10px;
+    padding-right: 10px;
 }

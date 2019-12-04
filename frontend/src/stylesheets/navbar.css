@@ -1,11 +1,11 @@
 /* Navbar */
 
-.main-nav, .auth-container, .greeting-container {
+.main-nav, .auth-container, .greeting-container, .review-nav {
     display: flex;
     justify-content: space-between;
 }
 
-.main-nav, .logo-nav {
+.main-nav, .logo-nav, .review-nav, .logo-r-container {
     width: auto;
     height: 60px;
     z-index: 2;
@@ -13,18 +13,22 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 30px;
 }
 
-.logo-nav {
+.logo-nav, .logo-r-container {
     display: flex;
 }
 
-.nav-title, .logo-title {
+.logo-r-container {
+    box-shadow: none;
+}
+
+.nav-title, .logo-title, .logo-title-r {
     font-size: 32px;
     margin-top: 10px;
     width: 270px;
     font-weight: bold;
 }
 
-.logo-title {
+.logo-title, .logo-title-r {
     margin-left: 31px;
 }
 
@@ -54,15 +58,16 @@
 }
 
 .signup-but, .login-but, .logout-but,
-.clear-but, .search-but {
+.clear-but, .search-but, .review-submit {
     text-decoration: none;
-    background-color: rgb(231, 171, 59);
+    background-color: rgb(255, 183, 50);
     font-weight: bold;
     height: 30px;
     width: 50px;
     padding-top: 12px;
     font-size: 16px;
     border-radius: 4px;
+    z-index: 2;
 }
 
 .signup-but:hover, .login-but:hover, .logout-but:hover, 
@@ -107,15 +112,13 @@
 /* when logged in */
 
 .greeting-container {
-    width: 320px;
+    width: 240px;
 }
 
 .welcome-message {
     color: white;
     font-size: 22px;
     margin-top: 18px;
-    margin-left: 10px;
-    width: 80%;
 }
 
 .logout-but {
@@ -125,4 +128,13 @@
     margin-right: 35px;
     padding-left: 15px;
     padding-right: 20px;
+}
+
+/* review navbar */
+
+.dashed-line {
+    border-right: 4px dotted rgb(6, 18, 22);
+    width: 1px;
+    height: 60px;
+    margin-left: 760px;
 }

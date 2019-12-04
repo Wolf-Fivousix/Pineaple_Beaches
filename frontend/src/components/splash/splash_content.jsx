@@ -40,7 +40,7 @@ class SplashContent extends React.Component {
                     </ul>
                 </div>
                 <GoogleApiContainer />
-                <h1 className="trade-mark">®</h1>
+                <h1 className="trade-mark-splash">®</h1>
             </div>
         );
     }
