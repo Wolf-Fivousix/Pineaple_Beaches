@@ -23,16 +23,19 @@ class Review extends React.Component {
     }
 
     render() {
-
+        debugger
         if(this.state.reviews.length === 0) {
             return (<div>No Reviews at the moment</div>)
         } else {
             return (
                 <div>
                     <h2>All Reviews</h2>
-                    {this.state.reviews.map(review => (
-                        <ReviewBox key={review._id} post={review.post} />
+                    {Object.keys(this.state.reviews).map(review => (
+                        <ReviewBox key={review} post={this.state.reviews[review].post} />
                     ))}
+                    {/* {this.state.reviews.map(review => (
+                        <ReviewBox key={review._id} post={review.post} />
+                    ))} */}
                 </div>
             );
         }

@@ -17,12 +17,16 @@ class BeachShow extends React.Component {
             temperature: 0,
             lat: 0,
             lon: 0,
-            date: 0
+            date: 0, 
+            reviews: []
         };
     }
     componentDidMount() {
-        console.log("mounted");
-        // debugger
+       this.props.fetchBeachReviews(this.props.match.params.beach_id);
+    }
+
+    componentWillReceiveProps(newState) {
+        // this.setState({ reviews: newState.reviews })
     }
     
     updateWeatherData() {
@@ -43,6 +47,7 @@ class BeachShow extends React.Component {
         let beach_id;
         if (this.props.beach) {
             beach_id = this.props.beach._id
+            // debugger
         }
         return (
             <div>

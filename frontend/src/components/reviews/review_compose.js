@@ -26,7 +26,7 @@ class ReviewCompose extends React.Component {
     
         this.props.composeReview(review);
         this.setState({post: ''})
-        console.log(this.props)
+        // console.log(this.props)
     }
 
     update() {
