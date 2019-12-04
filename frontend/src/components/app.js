@@ -21,7 +21,7 @@ const App = () => (
             {/* <ProtectedRoute exact path="/reviews/:beach_id" component={ReviewsContainer} /> */}
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
             <ProtectedRoute exact path="/new_review" component={ReviewComposeContainer} />
-            <ProtectedRoute path="/beaches/:beach_id" component={BeachShowContainer} />
+            <Route path="/beaches/:beach_id" component={BeachShowContainer} />
         </Switch>
     </div>
 );
