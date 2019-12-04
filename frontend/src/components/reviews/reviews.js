@@ -23,8 +23,8 @@ class Review extends React.Component {
     }
 
     render() {
-        debugger
-        if(this.state.reviews.length === 0) {
+        // debugger
+        if(Object.entries(this.state.reviews).length === 0) {
             return (<div>No Reviews at the moment</div>)
         } else {
             return (

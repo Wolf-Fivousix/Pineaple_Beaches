@@ -4,7 +4,7 @@ import Reviews from './reviews';
 
 const mSTP = (state,ownProps) => {
    console.log(ownProps)
-   debugger
+//    debugger
     return ({
         // beachReviews: Object.values(state.reviews.beach),
         // reviews: Object.values(state.entities.reviews.beach),
