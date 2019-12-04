@@ -11,15 +11,16 @@ class Profile extends React.Component {
     }
     
     componentWillMount() {
-        console.log(this.props.currentUser.id)
-        this.props.fetchUserReviews(this.props.currentUser.id);
+      console.log(this.props.currentUser.id)
+      this.props.fetchUserReviews(this.props.currentUser.id);
     }
-
+    
     componentWillReceiveProps(newState) {
-        this.setState({ reviews: newState.reviews });
+      this.setState({ reviews: newState.reviews });
     }   
     
     render() {
+      debugger
         if (this.state.reviews.length === 0) {
           return (<div>You currently have no Reviews</div>)
         } else {
