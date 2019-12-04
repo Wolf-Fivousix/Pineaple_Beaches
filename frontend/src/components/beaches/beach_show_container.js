@@ -1,8 +1,9 @@
 import { connect } from "react-redux";
 import BeachShow from "./beach_show";
-// import {
-//     fetchBeachById
-// } from "../../actions/beach_actions";
+import {
+    fetchBeachById,
+    updateBeachTemperature
+} from "../../actions/beach_actions";
 
 const mapStateToProps = (state, ownProps) => {
     return ({
@@ -10,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
 })};
 
 const mapDispatchToProps = dispatch => ({
-    
+    fetchBeachById: (beachId) => dispatch(fetchBeachById(beachId)),
+    updateBeachTemperature: (payload) => dispatch(updateBeachTemperature(payload))
 });
 
 export default connect(
