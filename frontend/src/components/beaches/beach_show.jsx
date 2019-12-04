@@ -16,7 +16,8 @@ class BeachShow extends React.Component {
             temperature: 0,
             lat: 0,
             lon: 0,
-            date: 0
+            date: 0, 
+            reviews: []
         };
     }
 
@@ -25,6 +26,8 @@ class BeachShow extends React.Component {
             .then(beach => this.setState(beach))
             .then(() => this.updateWeatherData())
             .catch(errors => console.log("ID Fetch failed"))
+
+       this.props.fetchBeachReviews(this.props.match.params.beach_id);
     }
     
     updateWeatherData() {
@@ -59,6 +62,7 @@ class BeachShow extends React.Component {
         let beach_id;
         if (this.props.beach) {
             beach_id = this.props.beach._id
+            // debugger
         }
         
         return (
