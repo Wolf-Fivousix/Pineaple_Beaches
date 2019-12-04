@@ -10,10 +10,7 @@ class Review extends React.Component {
             reviews: []
         }
     }
-    // componentWillMount() {
-    //     // this.props.fetchBeachReviews();
-    //     this.props.fetchUserReviews();
-    // }
+    
     componentWillMount() {
         this.props.fetchBeachReviews(this.props.beach_id);
     }
@@ -33,9 +30,6 @@ class Review extends React.Component {
                     {Object.keys(this.state.reviews).map(review => (
                         <ReviewBox key={review} post={this.state.reviews[review].post} />
                     ))}
-                    {/* {this.state.reviews.map(review => (
-                        <ReviewBox key={review._id} post={review.post} />
-                    ))} */}
                 </div>
             );
         }

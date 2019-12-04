@@ -1,9 +1,17 @@
 /* Google Map */
 
-.splash-container {
+.splash-container, .beach-show-container {
     background-color: rgb(255, 255, 230);
 }
 
-.trade-mark {
+.trade-mark-splash, .trade-mark-reviews {
+    font-size: 28px;
+}
+
+.trade-mark-splash {
     margin-top: 670px;
+}
+
+.trade-mark-reviews {
+    margin-top: 400px;
 }

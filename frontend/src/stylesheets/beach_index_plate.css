@@ -1,6 +1,6 @@
 /* selection dropdown */
 
-.ul-container {
+.ul-container, .ul-r-container {
     display: flex;
     align-items: center;
     justify-content: center;

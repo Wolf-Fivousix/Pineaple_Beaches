@@ -1,10 +1,8 @@
 import React from "react";
-import ReviewBox from "../reviews/review_box";
-import { Link } from 'react-router-dom';
 import ReviewComposeContainer from '../reviews/review_composer_container';
 import ReviewsContainer from '../reviews/reviews_container';
 import axios from 'axios';
-import NavBarContainer from "../nav/navbar_container";
+import ReviewNavbarContainer from "../nav/review_navbar_container";
 import { weatherAPIKey } from "../../google_api_key";
 
 class BeachShow extends React.Component {
@@ -22,37 +20,26 @@ class BeachShow extends React.Component {
             reviews: []
         };
     }
-    componentDidMount() {
-<<<<<<< HEAD
-       this.props.fetchBeachReviews(this.props.match.params.beach_id);
-    }
 
-    componentWillReceiveProps(newState) {
-        // this.setState({ reviews: newState.reviews })
-=======
-        console.log("mounted");
-        // debugger
+    componentDidMount() {
         this.props.fetchBeachById(this.props.match.params.beach_id)
-            .then(beach => {
-                this.setState(beach);
-            })
+            .then(beach => this.setState(beach))
+            .then(() => this.updateWeatherData())
             .catch(errors => console.log("ID Fetch failed"))
->>>>>>> master
+
+       this.props.fetchBeachReviews(this.props.match.params.beach_id);
     }
     
     updateWeatherData() {
-        console.log("Updating data...");
+        // Update if more than 1 hour since last update.
         const timeDifference = (Date.now() - new Date(this.state.date).getTime()) / 1000 / 60;
-        console.log(Math.floor(timeDifference));
-        // It has been more than 1 hour since last update.
         if (Math.floor(timeDifference) > 60) {
-            console.log("Update beep boop");
             axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.props.beach.lat}&lon=${this.props.beach.lon}&appid=${weatherAPIKey}`)
                 .then(response => {
                     // Prioritize updating the user.
                     this.setState({
                         temperature: response.data.main.temp,
-                        date: "Date.now()"
+                        date: Date.now()
                     });
                     // Now update the database.
                     // debugger;
@@ -64,9 +51,7 @@ class BeachShow extends React.Component {
                     this.props.updateBeachTemperature(payload);
                 })
                 .catch(errors => console.log(errors));
-
         }
-        else console.log("No update needed");
     }
 
 
@@ -81,19 +66,15 @@ class BeachShow extends React.Component {
         }
         
         return (
-            <div>
-                <NavBarContainer />
-                <p>This is a beach page, yay! =)</p>
-                <ReviewsContainer beach_id={beach_id} />
-                <ReviewComposeContainer beach_id={beach_id} />
-                <br />
-                <br />
-                <br />
-                <p>This is a beach page, yay! =)</p>
+            <div className="beach-show-container">
+                <ReviewNavbarContainer/>
+                <h1 className="beach-show-name">{
+                    // need to get name of beach
+                }</h1>
+                <ReviewsContainer beach_id={beach_id}/>
+                <ReviewComposeContainer beach_id={beach_id}/>
                 <p>Temperature is: {tempCelsius + " Celsius and " + tempFahrenheit + " Fahrenheit"}</p>
-                <button className="signup-but"
-                    onClick={this.updateWeatherData.bind(this)}
-                >CLICK MEEEEE =)</button>
+                <h1 className="trade-mark-reviews">®</h1>
             </div>
         );
     }
