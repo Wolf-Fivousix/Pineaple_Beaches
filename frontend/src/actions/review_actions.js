@@ -40,7 +40,14 @@ export const fetchBeachReviews = id => dispatch => (
 
 export const fetchUserReviews = id => dispatch => (
     getUserReviews(id)
-        .then(reviews => dispatch(receiveUserReviews(reviews)))
+        .then(reviews => {
+                 const ids = reviews.data.map(review => review._id)
+                 const revs = {}
+                 for (let i = 0; i < ids.length; i++) {
+                     revs[ids[i]] = reviews.data[i]
+                }
+                 return dispatch(receiveUserReviews(revs))
+            })
         .catch(error => console.log(error))
 )
 
@@ -51,3 +58,14 @@ export const composeReview = data => dispatch => {
         .then(review => dispatch(receiveNewReview(review)))
         .catch(error => console.log(error))
 )}
+
+// (reviews => {
+//     const ids = reviews.data.map(review => review._id)
+//     const revs = {}
+//     for (let i = 0; i < ids.length; i++) {
+//         revs[ids[i]] = reviews.data[i]
+//     }
+//     return dispatch(receiveUserReviews(revs))
+// })
+
+// reviews => dispatch(receiveUserReviews(reviews)))

@@ -20,15 +20,15 @@ class Profile extends React.Component {
     }   
     
     render() {
-      debugger
+      // debugger
         if (this.state.reviews.length === 0) {
           return (<div>You currently have no Reviews</div>)
         } else {
           return (
             <div>
               <h2>All of your Reviews</h2>
-              {this.state.reviews.map(review => (
-                <ReviewBox key={review._id} post={review.post} />
+              {Object.keys(this.state.reviews).map(review => (
+                <ReviewBox key={review} post={this.state.reviews[review].post} />
               ))}
             </div>
           );
@@ -37,3 +37,12 @@ class Profile extends React.Component {
 }
 
 export default Profile;
+
+
+// {Object.keys(this.state.reviews).map(review => (
+//   <ReviewBox key={review} post={this.state.reviews[review].post} />
+// ))}
+
+// {this.state.reviews.map(review => (
+//   <ReviewBox key={review._id} post={review.post} />
+// ))}

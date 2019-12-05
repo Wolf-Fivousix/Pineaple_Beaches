@@ -3,9 +3,9 @@ import { fetchUserReviews } from '../../actions/review_actions';
 import Profile from './profile';
 
 const mapStateToProps = (state) => {
-  debugger
+  // debugger
   return {
-    reviews: Object.values(state.entities.reviews.user),
+    reviews: Object.values(state.entities.reviews),
     currentUser: state.session.user
   };
 };
