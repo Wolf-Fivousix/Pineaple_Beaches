@@ -30,6 +30,11 @@
     margin-top: 10px;
 }
 
+.description-container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 /* detail content */
 
 .beach-show-location, .beach-show-name {
@@ -58,12 +63,4 @@
     color: rgb(153, 64, 226);
     margin-left: 15px;
     margin-right: 15px;
-}
-
-.beach-crowd-t {
-    margin-left: -4px;
-}
-
-.beach-show-crowd {
-    margin-left: 6px;
 }
