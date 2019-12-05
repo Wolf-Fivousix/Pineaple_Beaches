@@ -5,9 +5,10 @@ const ReviewsReducer = ( oldState = { beach: {}, user: {}, new: undefined }, act
     let newState = Object.assign({}, oldState);
     switch(action.type) {
         case RECEIVE_USER_REVIEWS:
-            debugger
-            newState.user = action.reviews.data;
-            return newState;
+            // debugger
+            // newState.user = action.reviews.data;
+            // return newState;
+            return Object.assign({},action.reviews)
         case RECEIVE_BEACH_REVIEWS:
             // debugger
             return Object.assign({},action.reviews)

@@ -28,6 +28,7 @@ class BeachShow extends React.Component {
             .catch(errors => console.log("ID Fetch failed"))
 
        this.props.fetchBeachReviews(this.props.match.params.beach_id);
+    //    this.props.receiveCurrentUser()
     }
     
     updateWeatherData() {
