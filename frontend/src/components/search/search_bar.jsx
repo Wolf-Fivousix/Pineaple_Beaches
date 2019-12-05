@@ -6,6 +6,7 @@ class SearchBar extends React.Component {
         this.state = { search: "" };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.clearButton = this.clearButton.bind(this);
     }
 
     componentDidMount() {
@@ -21,12 +22,19 @@ class SearchBar extends React.Component {
         this.props.fetchBeachByName(this.state.search);
     }
 
+    clearButton() {
+        console.log(this.state);
+        this.props.fetchAllBeaches();
+        this.setState({ search: "" });
+        document.getElementById("searchBar").value = "";
+    }
     render() {
         
         return (
             <div className="search-bar-container">
                 <form className="search-bar-form">
                     <input
+                        id="searchBar"
                         className="searchBarField"
                         type="text"
                         placeholder="Search Beach"
@@ -39,7 +47,7 @@ class SearchBar extends React.Component {
                     <button
                         type="button"
                         className="clear-but"
-                        onClick={() => this.props.fetchAllBeaches()}>Clear
+                        onClick={this.clearButton}>Clear
                     </button>
                 </form>
             </div>
