@@ -11,6 +11,8 @@ const mapStateToProps = (state, ownProps) => {
     return ({
     reviews: Object.values(state.entities.reviews),
     beach: state.entities.beaches[ownProps.match.params.beach_id],
+    loggedIn: state.session.isAuthenticated,
+    currentUser: state.session.user
 })};
 
 const mapDispatchToProps = dispatch => ({
