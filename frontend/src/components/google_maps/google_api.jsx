@@ -1,10 +1,12 @@
 import React from 'react';
 import { Map, Marker } from 'google-maps-react';
+import BeachShowContainer from '../beaches/beach_show_container'
 
 class GoogleApi extends React.Component {
 
     constructor(props) {
         super(props);
+        // debugger
         this.state = {
             activeMarker: {},
             selectedPlace: {}
@@ -19,7 +21,6 @@ class GoogleApi extends React.Component {
     componentDidMount() {
         this.props.fetchAllBeaches();
     }
-    
     onMarkerClick = (props, marker, e) => {
         this.setState({
             selectedPlace: props,
@@ -73,6 +74,7 @@ class GoogleApi extends React.Component {
                 }
             >
                 {this.displayMarkers()}
+                
             </Map>
         );
     }

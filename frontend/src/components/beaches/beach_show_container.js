@@ -8,6 +8,7 @@ import {
 import { receiveCurrentUser } from "../../actions/session_actions";
 
 const mapStateToProps = (state, ownProps) => {
+    debugger
     return ({
     reviews: Object.values(state.entities.reviews),
     beach: state.entities.beaches[ownProps.match.params.beach_id],
