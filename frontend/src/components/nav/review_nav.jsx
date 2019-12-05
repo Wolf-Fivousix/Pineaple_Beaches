@@ -22,6 +22,14 @@ class ReviewNavbar extends React.Component {
                 </div>
             );
         }
+        else {
+            return (
+                <div className="auth-container">
+                    <Link className="signup-but" to={'/signup'}>Signup</Link>
+                    <Link className="login-but" to={'/login'}>Login</Link>
+                </div>
+            );
+        }
     }
     // add a dashed line up in here ^
     render() {
