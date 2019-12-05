@@ -54,7 +54,7 @@ class GoogleApi extends React.Component {
             height: '85vh',
             'marginLeft': 'auto',
             'marginRight': 'auto',
-            'z-index': 2
+            'zIndex': 2
         }
 
         return (

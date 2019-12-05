@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import React from 'react'
 import { fetchAllBeaches, fetchBeachByName } from '../../actions/beach_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import GoogleApi from './google_api';

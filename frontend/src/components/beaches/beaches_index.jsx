@@ -12,8 +12,8 @@ class BeachesIndex extends React.Component {
     const { beach } = this.props;
     // console.log(new Date().getTime() - Date.now());
     // console.log(typeof (new Date()));
-    const timeDifference = (Date.now() - new Date(beach.date).getTime()) / 1000 / 60;
-    const time = Math.floor(timeDifference);
+    // const timeDifference = (Date.now() - new Date(beach.date).getTime()) / 1000 / 60;
+    // const time = Math.floor(timeDifference);
     // console.log(new Date(beach.date).getTime());
     // console.log(ObjectId(beach._id).getTimestamp());
     return (
