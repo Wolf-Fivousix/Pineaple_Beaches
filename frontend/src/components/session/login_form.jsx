@@ -96,6 +96,7 @@ class LoginForm extends React.Component {
                         </div>
                     </form>
                 </div>
+                <h1 className="trade-mark-sessions">®</h1>
             </div>
         );
     }
