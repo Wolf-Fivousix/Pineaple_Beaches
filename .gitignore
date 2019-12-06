@@ -2,3 +2,4 @@
 /frontend/node_modules/
 /config/keys_dev.js
 /frontend/src/google_api_key.js
+/frontend/src/api_keys_dev.js

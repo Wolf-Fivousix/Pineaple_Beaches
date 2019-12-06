@@ -3,7 +3,7 @@ import ReviewComposeContainer from '../reviews/review_composer_container';
 import ReviewsContainer from '../reviews/reviews_container';
 import axios from 'axios';
 import ReviewNavbarContainer from "../nav/review_navbar_container";
-import { weatherAPIKey } from "../../google_api_key";
+import { weatherAPIKey } from "../../api_keys";
 
 class BeachShow extends React.Component {
     constructor(props) {
