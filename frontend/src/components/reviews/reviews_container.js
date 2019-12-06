@@ -20,3 +20,5 @@ const mDTP = dispatch => {
 };
 
 export default connect(mSTP,mDTP)(Reviews)
+
+//maybe add .new at the end of line 13

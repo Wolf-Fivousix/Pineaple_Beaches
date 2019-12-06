@@ -29,8 +29,9 @@ export const fetchBeachReviews = id => dispatch => (
                     for (let i = 0; i < ids.length; i++) {
                         revs[ids[i]] = reviews.data[i]
                     }
-                    // debugger
-                    return  dispatch(receiveBeachReviews(revs))
+                    dispatch(receiveBeachReviews(revs))
+                    return revs
+
                 }
 
                 

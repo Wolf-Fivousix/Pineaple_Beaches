@@ -15,10 +15,14 @@ const ReviewsReducer = ( oldState = { beach: {}, user: {}, new: undefined }, act
             // newState.beach = action.reviews.data;
             // return newState;
         case RECEIVE_NEW_REVIEW:
-            newState.new = action.review.data
-            return newState;
+            // newState.new = action.review.data
             // debugger
-            // return Object.assign(newState, action.review.data)
+            // return newState;
+            const newRev = {
+                [action.review.data._id]: action.review.data
+            }
+            // debugger
+            return Object.assign({}, newState, newRev)
         default:
             return oldState;
     }

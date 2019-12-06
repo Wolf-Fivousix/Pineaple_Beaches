@@ -10,24 +10,43 @@ class Review extends React.Component {
             reviews: []
         }
     }
-    
+
     componentWillMount() {
-        this.props.fetchBeachReviews(this.props.beach_id);
+        // debugger
+        this.props.fetchBeachReviews(this.props.match.params.beach_id)
+        .then(reviews => {
+            // debugger
+            this.setState({
+            reviews: reviews
+        })})
     }
 
-    componentWillReceiveProps(newState) {
-        this.setState( {reviews: newState.reviews });
+    // componentWillReceiveProps(newState) {
+    //     debugger
+    //     this.setState({ reviews: newState.reviews });
+    // }
+
+    componentDidUpdate(prevState) {
+        // console.log("hey whats uppppppppp", prevState)
+        // debugger
+        if (this.props.reviews !== this.state.reviews) {
+            this.setState({
+                reviews: this.props.reviews
+            })
+        }
+        // this.props.fetchBeachReviews(this.props.beach_id);
     }
 
     render() {
         // debugger
-        if(Object.entries(this.state.reviews).length === 0) {
+        if (Object.entries(this.state.reviews).length === 0) {
             return (
                 <div className="no-reviews-container">
                     <h1 className="no-r-title">No Reviews at the moment</h1>
                 </div>
             );
         } else {
+            console.log(this.state)
             return (
                 <div>
                     <div className="show-reviews-container">
