@@ -5,15 +5,13 @@ import {
     fetchBeachById,
     updateBeachTemperature
 } from "../../actions/beach_actions";
-import { receiveCurrentUser } from "../../actions/session_actions";
 
 const mapStateToProps = (state, ownProps) => {
     // debugger
     return ({
     reviews: Object.values(state.entities.reviews),
     beach: state.entities.beaches[ownProps.match.params.beach_id],
-    loggedIn: state.session.isAuthenticated,
-    currentUser: state.session.user
+    loggedIn: state.session.isAuthenticated
 })};
 
 const mapDispatchToProps = dispatch => ({

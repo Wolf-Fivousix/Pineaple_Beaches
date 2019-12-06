@@ -1,5 +1,5 @@
 import * as beachUtils from "../util/beach_api_util";
-import { RECEIVE_BEACH_REVIEWS } from "./review_actions";
+// import { RECEIVE_BEACH_REVIEWS } from "./review_actions";
 
 export const RECEIVE_ALL_BEACHES = "RECEIVE_ALL_BEACHES";
 export const RECEIVE_NAMED_BEACHES = "RECEIVE_NAMED_BEACHES";

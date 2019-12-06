@@ -3,7 +3,7 @@
 .no-reviews-container, .show-reviews-container {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .no-r-title, .all-r-title {

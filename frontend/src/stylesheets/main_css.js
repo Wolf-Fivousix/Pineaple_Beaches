@@ -4,3 +4,4 @@ import './beach_index_plate.css';
 import './session_forms.css';
 import './splash_content.css';
 import './reviews.css';
+import './beach_show.css';
