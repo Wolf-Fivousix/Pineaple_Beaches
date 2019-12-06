@@ -8,6 +8,7 @@ import { weatherAPIKey } from "../../google_api_key";
 class BeachShow extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             name: "",
             description: "",
@@ -28,7 +29,6 @@ class BeachShow extends React.Component {
             .catch(errors => console.log("ID Fetch failed"))
 
        this.props.fetchBeachReviews(this.props.match.params.beach_id);
-    //    this.props.receiveCurrentUser()
     }
     
     updateWeatherData() {
@@ -55,7 +55,6 @@ class BeachShow extends React.Component {
         }
     }
 
-
     render() {
         const tempCelsius = Math.floor(this.state.temperature - 273.15);
         const tempFahrenheit = Math.floor((this.state.temperature - 273.15) * 9 / 5 + 32);
@@ -63,8 +62,56 @@ class BeachShow extends React.Component {
         let beach_id;
         if (this.props.beach) {
             beach_id = this.props.beach._id
-            // debugger
         }
+
+        // tried adding images but not working
+        // const images = {
+        //     ocean: "../images/oceanbeach.jpeg",
+        //     maverick: "images/mavericksbeach.jpeg",
+        //     pacifica: "",
+        //     huntington: "",
+        //     main: "",
+        //     salt: "",
+        //     thousand: "",
+        //     windansea: "",
+        //     stinson: "",
+        //     silver: ""
+        // }
+
+        // // uses latitude to find unique beach could have used id too
+        // const identifier = this.state.lat;
+        // let photo = "";
+
+        // if (identifier === 37.759433) {
+        //     photo = images.ocean;
+        // }
+        // else if (identifier === 37.495533) {
+        //     photo = images.maverick;
+        // }
+        // else if (identifier === 37.598881) {
+        //     photo = images.pacifica;
+        // }
+        // else if (identifier === 33.639124) {
+        //     photo = images.huntington;
+        // }
+        // else if (identifier === 33.542213) {
+        //     photo = images.main;
+        // }
+        // else if (identifier === 33.47522) {
+        //     photo = images.salt;
+        // }
+        // else if (identifier === 33.49778) {
+        //     photo = images.thousand;
+        // }
+        // else if (identifier === 32.829955) {
+        //     photo = images.windansea;
+        // }
+        // else if (identifier === 37.89889) {
+        //     photo = images.stinson;
+        // }
+        // else if (identifier === 32.634498) {
+        //     photo = images.silver;
+        // }
 
         if (this.props.loggedIn) {
             return (
@@ -90,6 +137,9 @@ class BeachShow extends React.Component {
                             </div>
                         </div>
                     </div>
+                    {/* <li className="image-container">
+                        <img className="beach-image" src={photo}/>
+                    </li> */}
                     <ReviewsContainer beach_id={beach_id}/>
                     <ReviewComposeContainer beach_id={beach_id}/>
                     <h1 className="trade-mark-reviews">®</h1>
@@ -119,6 +169,9 @@ class BeachShow extends React.Component {
                             </div>
                         </div>
                     </div>
+                    {/* <li className="image-container">
+                        <img className="beach-image" src={photo}/>
+                    </li> */}
                     <ReviewsContainer beach_id={beach_id}/>
                     <h1 className="trade-mark-reviews">®</h1>
                 </div>
