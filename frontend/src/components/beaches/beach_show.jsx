@@ -51,6 +51,56 @@ class BeachShow extends React.Component {
         const tempCelsius = Math.floor(this.state.temperature - 273.15);
         const tempFahrenheit = Math.floor((this.state.temperature - 273.15) * 9 / 5 + 32);
 
+        // tried adding images but not working
+        // const images = {
+        //     ocean: "../images/oceanbeach.jpeg",
+        //     maverick: "images/mavericksbeach.jpeg",
+        //     pacifica: "",
+        //     huntington: "",
+        //     main: "",
+        //     salt: "",
+        //     thousand: "",
+        //     windansea: "",
+        //     stinson: "",
+        //     silver: ""
+        // }
+
+        // // uses latitude to find unique beach could have used id too
+        // const identifier = this.state.lat;
+        // let photo = "";
+
+        // if (identifier === 37.759433) {
+        //     photo = images.ocean;
+        // }
+        // else if (identifier === 37.495533) {
+        //     photo = images.maverick;
+        // }
+        // else if (identifier === 37.598881) {
+        //     photo = images.pacifica;
+        // }
+        // else if (identifier === 33.639124) {
+        //     photo = images.huntington;
+        // }
+        // else if (identifier === 33.542213) {
+        //     photo = images.main;
+        // }
+        // else if (identifier === 33.47522) {
+        //     photo = images.salt;
+        // }
+        // else if (identifier === 33.49778) {
+        //     photo = images.thousand;
+        // }
+        // else if (identifier === 32.829955) {
+        //     photo = images.windansea;
+        // }
+        // else if (identifier === 37.89889) {
+        //     photo = images.stinson;
+        // }
+        // else if (identifier === 32.634498) {
+        //     photo = images.silver;
+        // }
+
+        
         let beach_id;
         if (this.props.beach) {
             beach_id = this.props.beach._id
@@ -60,9 +110,53 @@ class BeachShow extends React.Component {
             return (
                 <div className="beach-show-container">
                     <ReviewNavbarContainer/>
-                    <h1 className="beach-show-name">{
-                        this.state.name
-                    }</h1>
+                    <div className="beach-container">
+                        <div className="beach-name-container">
+                            <h1 className="beach-show-location">{this.state.location} - </h1>
+                            <h1 className="beach-show-name">{this.state.name}</h1>
+                        </div>
+                        <div className="description-container">
+                            <h3 className="beach-desc-t">Description:  </h3>
+                            <h3 className="beach-show-description">{this.state.description}</h3>
+                        </div>
+                        <div className="beach-detail-container">
+                            <div className="crowd-container">
+                                <h3 className="beach-crowd-t">Crowd-Level:  </h3>
+                                <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                            </div>
+                            <div className="temperature-container">
+                                <h3 className="beach-temp-t">Temperature:  </h3>
+                                <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <li className="image-container">
+                        <img className="beach-image" src={photo}/>
+                    </li> */}
+                    
+                    <div className="beach-container">
+                        <div className="beach-name-container">
+                            <h1 className="beach-show-location">{this.state.location} - </h1>
+                            <h1 className="beach-show-name">{this.state.name}</h1>
+                        </div>
+                        <div className="description-container">
+                            <h3 className="beach-desc-t">Description:  </h3>
+                            <h3 className="beach-show-description">{this.state.description}</h3>
+                        </div>
+                        <div className="beach-detail-container">
+                            <div className="crowd-container">
+                                <h3 className="beach-crowd-t">Crowd-Level:  </h3>
+                                <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                            </div>
+                            <div className="temperature-container">
+                                <h3 className="beach-temp-t">Temperature:  </h3>
+                                <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <li className="image-container">
+                        <img className="beach-image" src={photo}/>
+                    </li> */}
                     <ReviewsContainer beach_id={beach_id}/>
                     <ReviewComposeContainer beach_id={beach_id}/>
                     <p>Temperature is: {tempCelsius + " Celsius and " + tempFahrenheit + " Fahrenheit"}</p>
