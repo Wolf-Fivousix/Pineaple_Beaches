@@ -1,6 +1,4 @@
-# Pineapple Beaches
-
-[Live App](https://pineapple-beaches.herokuapp.com/)
+# [Pineapple Beaches](https://pineapple-beaches.herokuapp.com/)
 
 Pineapple Beaches is a website where users can interact with posts and beaches to understand more information about local or travel locations which involve beaches. This project uses **MongoDb, Express, React, Redux, and Node.JS** for the framework.
 

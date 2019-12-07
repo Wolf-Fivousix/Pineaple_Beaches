@@ -1,14 +1,11 @@
 import React from "react";
 import ReviewComposeContainer from '../reviews/review_composer_container';
 import ReviewsContainer from '../reviews/reviews_container';
-import axios from 'axios';
 import ReviewNavbarContainer from "../nav/review_navbar_container";
-import { weatherAPIKey } from "../../api_keys";
 
 class BeachShow extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             name: "",
             description: "",
@@ -20,49 +17,39 @@ class BeachShow extends React.Component {
             date: 0, 
             reviews: []
         };
+        this.updateWeatherData = this.updateWeatherData.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchBeachById(this.props.match.params.beach_id)
             .then(beach => this.setState(beach))
+                .catch(errors => console.log("ID Fetch failed"))
             .then(() => this.updateWeatherData())
-            .catch(errors => console.log("ID Fetch failed"))
+                .catch (errors => console.log("Weather Data Update failed"));
+            
 
-       this.props.fetchBeachReviews(this.props.match.params.beach_id);
+        this.props.fetchBeachReviews(this.props.match.params.beach_id);
     }
     
     updateWeatherData() {
         // Update if more than 1 hour since last update.
         const timeDifference = (Date.now() - new Date(this.state.date).getTime()) / 1000 / 60;
+
         if (Math.floor(timeDifference) > 60) {
-            axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.props.beach.lat}&lon=${this.props.beach.lon}&appid=${weatherAPIKey}`)
-                .then(response => {
-                    // Prioritize updating the user.
-                    this.setState({
-                        temperature: response.data.main.temp,
-                        date: Date.now()
-                    });
-                    // Now update the database.
-                    // debugger;
-                    const payload = {
-                        _id: this.props.match.params.beach_id,
-                        temperature: response.data.main.temp,
-                        date: new Date()
-                    }
-                    this.props.updateBeachTemperature(payload);
-                })
-                .catch(errors => console.log(errors));
+            const payload = {
+                _id: this.state._id,
+                lat: this.state.lat,
+                lon: this.state.lon
+            };
+            this.props.updateBeachTemperature(payload)
+                .then(newTemp => this.setState({ temperature: newTemp }));
         }
     }
+
 
     render() {
         const tempCelsius = Math.floor(this.state.temperature - 273.15);
         const tempFahrenheit = Math.floor((this.state.temperature - 273.15) * 9 / 5 + 32);
-
-        let beach_id;
-        if (this.props.beach) {
-            beach_id = this.props.beach._id
-        }
 
         // tried adding images but not working
         // const images = {
@@ -113,6 +100,12 @@ class BeachShow extends React.Component {
         //     photo = images.silver;
         // }
 
+        
+        let beach_id;
+        if (this.props.beach) {
+            beach_id = this.props.beach._id
+        }
+
         if (this.props.loggedIn) {
             return (
                 <div className="beach-show-container">
@@ -140,15 +133,7 @@ class BeachShow extends React.Component {
                     {/* <li className="image-container">
                         <img className="beach-image" src={photo}/>
                     </li> */}
-                    <ReviewsContainer beach_id={beach_id}/>
-                    <ReviewComposeContainer beach_id={beach_id}/>
-                    <h1 className="trade-mark-reviews">®</h1>
-                </div>
-            );
-        } else {
-            return (
-                <div className="beach-show-container">
-                    <ReviewNavbarContainer/>
+                    
                     <div className="beach-container">
                         <div className="beach-name-container">
                             <h1 className="beach-show-location">{this.state.location} - </h1>
@@ -173,6 +158,20 @@ class BeachShow extends React.Component {
                         <img className="beach-image" src={photo}/>
                     </li> */}
                     <ReviewsContainer beach_id={beach_id}/>
+                    <ReviewComposeContainer beach_id={beach_id}/>
+                    <p>Temperature is: {tempCelsius + " Celsius and " + tempFahrenheit + " Fahrenheit"}</p>
+                    <h1 className="trade-mark-reviews">®</h1>
+                </div>
+            );
+        } else {
+            return (
+                <div className="beach-show-container">
+                    <ReviewNavbarContainer/>
+                    <h1 className="beach-show-name">{
+                        // need to get name of beach
+                    }</h1>
+                    <ReviewsContainer beach_id={beach_id}/>
+                    <p>Temperature is: {tempCelsius + " Celsius and " + tempFahrenheit + " Fahrenheit"}</p>
                     <h1 className="trade-mark-reviews">®</h1>
                 </div>
             );
