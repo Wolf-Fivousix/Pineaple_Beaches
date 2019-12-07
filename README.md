@@ -19,6 +19,7 @@ This project was built and designed within a 5 day period by a team of three. We
  * Weather Api updates the beaches weather every hour.
  * Selecting a beach plate opens all the information for that particular beach.
  * Registered users can review a beach.
+ * Cross-Origin Resource Sharing secure by customized backend Axios request to remote source.
  
 ### Screenshots
 ![](images/screenshot1.jpeg)
