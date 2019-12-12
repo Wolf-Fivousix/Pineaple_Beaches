@@ -2,6 +2,7 @@ import React from "react";
 import ReviewComposeContainer from '../reviews/review_composer_container';
 import ReviewsContainer from '../reviews/reviews_container';
 import ReviewNavbarContainer from "../nav/review_navbar_container";
+import { Link } from 'react-router-dom';
 
 class BeachShow extends React.Component {
     constructor(props) {
@@ -60,23 +61,25 @@ class BeachShow extends React.Component {
             return (
                 <div className="beach-show-container">
                     <ReviewNavbarContainer/>
-                    <div className="beach-container">
-                        <div className="beach-name-container">
-                            <h1 className="beach-show-location">{this.state.location} - </h1>
-                            <h1 className="beach-show-name">{this.state.name}</h1>
-                        </div>
-                        <div className="description-container">
-                            <h3 className="beach-desc-t">Description:  </h3>
-                            <h3 className="beach-show-description">{this.state.description}</h3>
-                        </div>
-                        <div className="beach-detail-container">
-                            <div className="crowd-container">
-                                <h3 className="beach-crowd-t">Crowd-Level:  </h3>
-                                <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                    <div className="detail-center">
+                        <div className="beach-container">
+                            <div className="beach-name-container">
+                                <h1 className="beach-show-location">{this.state.location} - </h1>
+                                <h1 className="beach-show-name">{this.state.name}</h1>
                             </div>
-                            <div className="temperature-container">
-                                <h3 className="beach-temp-t">Temperature:  </h3>
-                                <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                            <div className="description-container">
+                                <h3 className="beach-desc-t">Description:  </h3>
+                                <h3 className="beach-show-description">{this.state.description}</h3>
+                            </div>
+                            <div className="beach-detail-container">
+                                <div className="crowd-container">
+                                    <h3 className="beach-crowd-t">Crowd-Level:  </h3>
+                                    <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                                </div>
+                                <div className="temperature-container">
+                                    <h3 className="beach-temp-t">Temperature:  </h3>
+                                    <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,27 +92,37 @@ class BeachShow extends React.Component {
             return (
                 <div className="beach-show-container">
                     <ReviewNavbarContainer/>
-                    <div className="beach-container">
-                        <div className="beach-name-container">
-                            <h1 className="beach-show-location">{this.state.location} - </h1>
-                            <h1 className="beach-show-name">{this.state.name}</h1>
-                        </div>
-                        <div className="description-container">
-                            <h3 className="beach-desc-t">Description:  </h3>
-                            <h3 className="beach-show-description">{this.state.description}</h3>
-                        </div>
-                        <div className="beach-detail-container">
-                            <div className="crowd-container">
-                                <h3 className="beach-crowd-t">Crowd-Level:  </h3>
-                                <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                    <div className="detail-center">
+                        <div className="beach-container">
+                            <div className="beach-name-container">
+                                <h1 className="beach-show-location">{this.state.location} - </h1>
+                                <h1 className="beach-show-name">{this.state.name}</h1>
                             </div>
-                            <div className="temperature-container">
-                                <h3 className="beach-temp-t">Temperature:  </h3>
-                                <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                            <div className="description-container">
+                                <h3 className="beach-desc-t">Description:  </h3>
+                                <h3 className="beach-show-description">{this.state.description}</h3>
+                            </div>
+                            <div className="beach-detail-container">
+                                <div className="crowd-container">
+                                    <h3 className="beach-crowd-t">Crowd-Level:  </h3>
+                                    <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                                </div>
+                                <div className="temperature-container">
+                                    <h3 className="beach-temp-t">Temperature:  </h3>
+                                    <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <ReviewsContainer beach_id={beach_id}/>
+                    <div className="needlog-center">
+                        <div className="needlog-container">
+                            <h1 className="want-to-add">Want to leave a review?</h1>
+                            <div className="review-login-container">
+                                <Link className="review-login" to="/login">Log In Here!</Link>
+                            </div>
+                        </div>
+                    </div>
                     <h1 className="trade-mark-reviews">®</h1>
                 </div>
             );

@@ -1,8 +1,13 @@
 /* Navbar */
 
-.main-nav, .auth-container, .greeting-container, .review-nav {
+.main-nav, .auth-container, .greeting-container, 
+.review-nav, .main-pine {
     display: flex;
     justify-content: space-between;
+}
+
+.main-pine {
+    width: 339px;
 }
 
 .main-nav, .logo-nav, .review-nav, .logo-r-container {
@@ -128,13 +133,4 @@
     margin-right: 35px;
     padding-left: 15px;
     padding-right: 20px;
-}
-
-/* review navbar */
-
-.dashed-line {
-    border-right: 4px dotted rgb(6, 18, 22);
-    width: 1px;
-    height: 60px;
-    margin-left: 772px;
 }
