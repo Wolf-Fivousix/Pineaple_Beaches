@@ -129,12 +129,3 @@
     padding-left: 15px;
     padding-right: 20px;
 }
-
-/* review navbar */
-
-.dashed-line {
-    border-right: 4px dotted rgb(6, 18, 22);
-    width: 1px;
-    height: 60px;
-    margin-left: 772px;
-}

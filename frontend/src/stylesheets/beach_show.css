@@ -2,18 +2,27 @@
 
 /* containers */
 
+.detail-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .beach-container {
     justify-content: center;
     margin-top: 35px;
-    margin-left: 340px;
     background-color: rgb(202, 255, 223);
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
-    width: 52%;
+    width: 680px;
     border-radius: 3px;
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.beach-container:hover {
+    background-color: rgb(170, 253, 204);
 }
 
 .beach-name-container, .beach-detail-container {
@@ -64,3 +73,5 @@
     margin-left: 15px;
     margin-right: 15px;
 }
+
+/*  */

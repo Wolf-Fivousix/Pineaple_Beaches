@@ -60,23 +60,25 @@ class BeachShow extends React.Component {
             return (
                 <div className="beach-show-container">
                     <ReviewNavbarContainer/>
-                    <div className="beach-container">
-                        <div className="beach-name-container">
-                            <h1 className="beach-show-location">{this.state.location} - </h1>
-                            <h1 className="beach-show-name">{this.state.name}</h1>
-                        </div>
-                        <div className="description-container">
-                            <h3 className="beach-desc-t">Description:  </h3>
-                            <h3 className="beach-show-description">{this.state.description}</h3>
-                        </div>
-                        <div className="beach-detail-container">
-                            <div className="crowd-container">
-                                <h3 className="beach-crowd-t">Crowd-Level:  </h3>
-                                <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                    <div className="detail-center">
+                        <div className="beach-container">
+                            <div className="beach-name-container">
+                                <h1 className="beach-show-location">{this.state.location} - </h1>
+                                <h1 className="beach-show-name">{this.state.name}</h1>
                             </div>
-                            <div className="temperature-container">
-                                <h3 className="beach-temp-t">Temperature:  </h3>
-                                <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                            <div className="description-container">
+                                <h3 className="beach-desc-t">Description:  </h3>
+                                <h3 className="beach-show-description">{this.state.description}</h3>
+                            </div>
+                            <div className="beach-detail-container">
+                                <div className="crowd-container">
+                                    <h3 className="beach-crowd-t">Crowd-Level:  </h3>
+                                    <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                                </div>
+                                <div className="temperature-container">
+                                    <h3 className="beach-temp-t">Temperature:  </h3>
+                                    <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,23 +91,25 @@ class BeachShow extends React.Component {
             return (
                 <div className="beach-show-container">
                     <ReviewNavbarContainer/>
-                    <div className="beach-container">
-                        <div className="beach-name-container">
-                            <h1 className="beach-show-location">{this.state.location} - </h1>
-                            <h1 className="beach-show-name">{this.state.name}</h1>
-                        </div>
-                        <div className="description-container">
-                            <h3 className="beach-desc-t">Description:  </h3>
-                            <h3 className="beach-show-description">{this.state.description}</h3>
-                        </div>
-                        <div className="beach-detail-container">
-                            <div className="crowd-container">
-                                <h3 className="beach-crowd-t">Crowd-Level:  </h3>
-                                <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                    <div className="detail-center">
+                        <div className="beach-container">
+                            <div className="beach-name-container">
+                                <h1 className="beach-show-location">{this.state.location} - </h1>
+                                <h1 className="beach-show-name">{this.state.name}</h1>
                             </div>
-                            <div className="temperature-container">
-                                <h3 className="beach-temp-t">Temperature:  </h3>
-                                <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                            <div className="description-container">
+                                <h3 className="beach-desc-t">Description:  </h3>
+                                <h3 className="beach-show-description">{this.state.description}</h3>
+                            </div>
+                            <div className="beach-detail-container">
+                                <div className="crowd-container">
+                                    <h3 className="beach-crowd-t">Crowd-Level:  </h3>
+                                    <h3 className="beach-show-crowd">{this.state.crowdLevel}</h3>
+                                </div>
+                                <div className="temperature-container">
+                                    <h3 className="beach-temp-t">Temperature:  </h3>
+                                    <h3 className="beach-show-temperature">{tempCelsius + "ºC | " + tempFahrenheit + "ºF"}</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
