@@ -1,8 +1,13 @@
 /* Navbar */
 
-.main-nav, .auth-container, .greeting-container, .review-nav {
+.main-nav, .auth-container, .greeting-container, 
+.review-nav, .main-pine {
     display: flex;
     justify-content: space-between;
+}
+
+.main-pine {
+    width: 339px;
 }
 
 .main-nav, .logo-nav, .review-nav, .logo-r-container {

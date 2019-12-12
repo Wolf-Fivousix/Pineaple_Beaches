@@ -1,6 +1,7 @@
 /* selection dropdown */
 
-.ul-container, .ul-r-container {
+.ul-container, .ul-r-container,
+.beach-name-container, .beach-location-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,12 +18,17 @@
 .beachIndexPlate {
     background-color: rgb(226, 255, 250);
     border: 1px solid gray;
-    width: 450px;
+    width: 430px;
     margin: auto;
     padding: 3px;
     margin-top: 18px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 8px;
+    transition: 0.7s;
+}
+
+.beachIndexPlate:hover {
+    background-color: rgb(176, 255, 243);
 }
 
 .beach-name {

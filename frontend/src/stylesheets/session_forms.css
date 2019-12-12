@@ -23,6 +23,10 @@
     width: 272px;
 }
 
+.login-form:hover, .signup-form:hover {
+    background-color: rgb(196, 255, 246);
+}
+
 .login-form {
     height: 366px;
 }

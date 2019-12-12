@@ -36,9 +36,11 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="main-nav">
-                <Link className="pine-icon-left" to="/">&#127821;</Link>
-                <Link className="nav-title" to="/">Pineapple Beach</Link>
-                <Link className="pine-icon-right" to="/">&#127821;</Link>
+                <div className="main-pine">
+                    <Link className="pine-icon-left" to="/">&#127821;</Link>
+                    <Link className="nav-title" to="/">Pineapple Beach</Link>
+                    <Link className="pine-icon-right" to="/">&#127821;</Link>
+                </div>
                 <SearchBarContainer />
                 {this.getLinks()}
             </div>

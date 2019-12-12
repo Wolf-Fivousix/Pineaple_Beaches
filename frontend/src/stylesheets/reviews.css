@@ -122,7 +122,8 @@
 /* Hover Changes */
 
 .review-form, .ul-reviews, .beach-container,
-.no-r-title, .all-r-title, .needlog-container {
+.no-r-title, .all-r-title, .needlog-container,
+.login-form, .signup-form {
     transition: 1s;
 }
 
