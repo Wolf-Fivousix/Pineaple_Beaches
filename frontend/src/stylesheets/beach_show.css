@@ -2,7 +2,7 @@
 
 /* containers */
 
-.detail-center {
+.detail-center, .needlog-center, .review-login-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,4 +74,25 @@
     margin-right: 15px;
 }
 
-/*  */
+/* want to login? */
+
+.needlog-container {
+    background-color: rgb(226, 255, 250);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
+    border-radius: 3px;
+    margin-top: 25px;
+    padding-bottom: 13px;
+    padding-top: 12px;
+}
+
+.want-to-add {
+    font-size: 20px;
+    font-weight: bold;
+    width: 243px;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.review-login-container {
+    margin-top: 7px;
+}

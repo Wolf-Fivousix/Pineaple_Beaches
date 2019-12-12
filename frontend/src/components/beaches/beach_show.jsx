@@ -2,6 +2,7 @@ import React from "react";
 import ReviewComposeContainer from '../reviews/review_composer_container';
 import ReviewsContainer from '../reviews/reviews_container';
 import ReviewNavbarContainer from "../nav/review_navbar_container";
+import { Link } from 'react-router-dom';
 
 class BeachShow extends React.Component {
     constructor(props) {
@@ -114,6 +115,14 @@ class BeachShow extends React.Component {
                         </div>
                     </div>
                     <ReviewsContainer beach_id={beach_id}/>
+                    <div className="needlog-center">
+                        <div className="needlog-container">
+                            <h1 className="want-to-add">Want to leave a review?</h1>
+                            <div className="review-login-container">
+                                <Link className="review-login" to="/login">Log In Here!</Link>
+                            </div>
+                        </div>
+                    </div>
                     <h1 className="trade-mark-reviews">®</h1>
                 </div>
             );

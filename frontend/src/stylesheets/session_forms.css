@@ -105,13 +105,12 @@
     padding-left: 46px;
 }
 
-.to-signup, .to-login {
+.to-signup, .to-login, .review-login {
     text-decoration: none;
     background-color: rgb(49, 144, 220);
     color: white;
     font-weight: bold;
     border-radius: 4px;
-    margin-left: 68px;
     font-size: 15px;
     padding-top: 6.5px;
     padding-bottom: 6.5px;
@@ -127,7 +126,8 @@
     margin-left: 75px;
 }
 
-.to-signup:hover, .to-login:hover, .back-arrow:hover {
+.to-signup:hover, .to-login:hover, 
+.back-arrow:hover, .review-login:hover {
     cursor: pointer;
     background-color: rgb(45, 148, 233);
 }

@@ -122,12 +122,13 @@
 /* Hover Changes */
 
 .review-form, .ul-reviews, .beach-container,
-.no-r-title, .all-r-title {
+.no-r-title, .all-r-title, .needlog-container {
     transition: 1s;
 }
 
 .review-form:hover, .ul-reviews:hover,
-.no-r-title:hover, .all-r-title:hover {
+.no-r-title:hover, .all-r-title:hover,
+.needlog-container:hover {
     background-color: rgb(188, 255, 245);
 }
 
