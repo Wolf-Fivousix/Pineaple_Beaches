@@ -5,3 +5,4 @@ import './session_forms.css';
 import './splash_content.css';
 import './reviews.css';
 import './beach_show.css';
+import './profile.css';

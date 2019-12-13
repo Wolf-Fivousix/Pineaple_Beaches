@@ -1,6 +1,7 @@
 /* Google Map */
 
-.splash-container, .beach-show-container {
+.splash-container, .beach-show-container,
+.profile-page-container {
     background-color: rgb(255, 255, 230);
 }
 

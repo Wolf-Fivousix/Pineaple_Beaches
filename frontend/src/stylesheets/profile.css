@@ -1,0 +1,70 @@
+/* profile page */
+
+/* profile sidebar */
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-sidebar {
+    background-color: rgb(255, 129, 91);
+    height: 100%;
+    width: 400px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.title-profile, .all-profile-reviews,
+.no-profile-reviews, .username-profile {
+    font-weight: bold;
+}
+
+.title-profile {
+    font-size: 30px;
+}
+
+.username-profile {
+    font-size: 19px;
+}
+
+/* profile content */
+/* No profile reviews */
+
+.no-profile-reviews {
+    background-color: rgb(226, 255, 250);
+    font-size: 22px;
+}
+
+/* All reviews from user */
+
+.all-profile-reviews {
+    background-color: rgb(226, 255, 250);
+    font-size: 22px;
+}
+
+.ul-r-profile {
+    margin-top: 20px;
+}
+
+.ul-profile {
+    background-color: rgb(226, 255, 250);
+    border-radius: 3px;
+    display: flex;
+    width: 900px;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
+    padding-bottom: 15px;
+}
+
+/* hover effects */
+
+.no-profile-reviews, .ul-profile,
+.all-profile-reviews {
+    transition: 1s;
+}
+
+.no-profile-reviews:hover, .ul-profile:hover,
+.all-profile-reviews:hover {
+    background-color: rgb(161, 255, 239);
+}
