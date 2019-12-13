@@ -2,49 +2,86 @@
 
 /* profile sidebar */
 
-.profile-container {
+.profile-container, .title-profile-container, .username-profile-container,
+.p-center-content, .ul-r-profile, .thanks-container {
     display: flex;
+}
+
+.profile-container {
     justify-content: space-between;
 }
 
 .profile-sidebar {
-    background-color: rgb(255, 129, 91);
-    height: 100%;
-    width: 400px;
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
+    background-color: rgb(255, 148, 116);
+    height: 100vh;
+    width: 500px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .title-profile, .all-profile-reviews,
-.no-profile-reviews, .username-profile {
+.no-profile-reviews, .username-profile,
+.profile-thanks {
     font-weight: bold;
 }
 
+.title-profile-container, .username-profile-container,
+.p-center-content, .ul-r-profile, .thanks-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.title-profile-container {
+    margin-top: 30px;
+}
+
+.username-profile-container {
+    margin-top: 40px;
+}
+
 .title-profile {
-    font-size: 30px;
+    font-size: 46px;
+    margin-left: -15px;
 }
 
 .username-profile {
-    font-size: 19px;
+    font-size: 30px;
+    margin-left: -17px;
+}
+
+.all-profile-reviews, .no-profile-reviews,
+.profile-thanks {
+    background-color: rgb(226, 255, 250);
+    font-size: 26px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 /* profile content */
 /* No profile reviews */
 
 .no-profile-reviews {
-    background-color: rgb(226, 255, 250);
-    font-size: 22px;
+    margin-top: 40px;
 }
 
 /* All reviews from user */
 
+.p-center-content {
+    width: 1300px;
+}
+
 .all-profile-reviews {
-    background-color: rgb(226, 255, 250);
-    font-size: 22px;
+    margin-top: 20px;
 }
 
 .ul-r-profile {
     margin-top: 20px;
+    width: 1300px;
 }
 
 .ul-profile {
@@ -57,14 +94,23 @@
     padding-bottom: 15px;
 }
 
+.profile-thanks {
+    font-size: 22px;
+    margin-top: 40px;
+}
+
 /* hover effects */
 
-.no-profile-reviews, .ul-profile,
-.all-profile-reviews {
+.no-profile-reviews, .ul-profile, .profile-thanks,
+.all-profile-reviews, .profile-sidebar {
     transition: 1s;
 }
 
+.profile-sidebar:hover {
+    background-color: rgb(255, 129, 91);
+}
+
 .no-profile-reviews:hover, .ul-profile:hover,
-.all-profile-reviews:hover {
+.all-profile-reviews:hover, .profile-thanks:hover {
     background-color: rgb(161, 255, 239);
 }

@@ -26,14 +26,19 @@ class Profile extends React.Component {
           <ReviewNavbarContainer/>
           <div className="profile-container">
             <div className="profile-sidebar">
-              <h1 className="title-profile">Profile</h1>
-              <h1 className="username-profile">{this.props.currentUser.username}</h1>
+              <div className="title-profile-container">
+                <h1 className="title-profile">Profile</h1>
+              </div>
+              <div className="username-profile-container">
+                <h1 className="username-profile">{this.props.currentUser.username}</h1>
+              </div>
             </div>
             <div className="profile-content">
-              <h1 className="no-profile-reviews">You currently have no reviews</h1>
+              <div className="p-center-content">
+                <h1 className="no-profile-reviews">You currently have no reviews</h1>
+              </div>
             </div>
           </div>
-          <h1 className="trade-mark-reviews">®</h1>
         </div>
       )
     } else {
@@ -42,11 +47,17 @@ class Profile extends React.Component {
           <ReviewNavbarContainer/>
           <div className="profile-container">
             <div className="profile-sidebar">
-              <h1 className="title-profile">Profile</h1>
-              <h1 className="username-profile">{this.props.currentUser.username}</h1>
+              <div className="title-profile-container">
+                <h1 className="title-profile">Profile</h1>
+              </div>
+              <div className="username-profile-container">
+                <h1 className="username-profile">{this.props.currentUser.username}</h1>
+              </div>
             </div>
             <div className="profile-content">
-              <h1 className="all-profile-reviews">All of your Reviews</h1>
+              <div className="p-center-content">
+                <h1 className="all-profile-reviews">All of your Reviews</h1>
+              </div>
               <div className="ul-r-profile">
                 <ul className="ul-profile">
                   {Object.keys(this.state.reviews).map(review => (
@@ -54,10 +65,11 @@ class Profile extends React.Component {
                   ))}
                 </ul>
               </div>
-              {/* <h1>Thank you for taking time to write reviews</h1>   add a smiley face */}
+              <div className="thanks-container">
+                <h1 className="profile-thanks">Thank you for taking time to write reviews</h1>
+              </div>
             </div>
           </div>
-          <h1 className="trade-mark-reviews">®</h1>
         </div>
       );
     }
