@@ -14,7 +14,7 @@
 .profile-sidebar {
     background-color: rgb(255, 148, 116);
     height: 100vh;
-    width: 500px;
+    width: 430px;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -72,7 +72,7 @@
 /* All reviews from user */
 
 .p-center-content {
-    width: 1300px;
+    width: 1250px;
 }
 
 .all-profile-reviews {
@@ -81,7 +81,7 @@
 
 .ul-r-profile {
     margin-top: 20px;
-    width: 1300px;
+    width: 1250px;
 }
 
 .ul-profile {
