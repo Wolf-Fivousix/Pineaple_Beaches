@@ -36,9 +36,9 @@ class ReviewNavbar extends React.Component {
         return (
             <div className="review-nav">
                 <div className="logo-r-container">
-                    <Link className="pine-icon-left" to="/">&#127821;</Link>
+                    <Link className="pine-icon-left" to="/"><span role="img" aria-label="pineapple">&#127821;</span></Link>
                     <Link className="logo-title-r" to="/">Pineapple Beach</Link>
-                    <Link className="logo-pine-icon-right" to="/">&#127821;</Link>
+                    <Link className="logo-pine-icon-right" to="/"><span role="img" aria-label="pineapple">&#127821;</span></Link>
                 </div>
                 {this.getLinks()}
             </div>
