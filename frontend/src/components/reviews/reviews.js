@@ -46,7 +46,6 @@ class Review extends React.Component {
                 </div>
             );
         } else {
-            console.log(this.state)
             return (
                 <div>
                     <div className="show-reviews-container">

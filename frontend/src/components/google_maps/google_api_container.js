@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { fetchAllBeaches, fetchBeachByName } from '../../actions/beach_actions';
-import { openModal, closeModal } from '../../actions/modal_actions';
+import { fetchAllBeaches } from '../../actions/beach_actions';
+import { closeModal } from '../../actions/modal_actions';
 import GoogleApi from './google_api';
 
 const mapStateToProps = (state) => {
