@@ -11,7 +11,8 @@
     height: 650px;
 }
 
-.login-form, .signup-form {
+.login-form, .login-form-errors,
+.signup-form, .signup-form-errors {
     background-color: rgb(219, 247, 255);
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
     margin-right: 65px;
@@ -27,12 +28,20 @@
     background-color: rgb(196, 255, 246);
 }
 
-.login-form {
+.login-form-errors {
     height: 366px;
 }
 
-.signup-form {
+.login-form {
+    height: 272px;
+}
+
+.signup-form-errors {
     height: 480px;
+}
+
+.signup-form {
+    height: 318px;
 }
 
 /* Form content */

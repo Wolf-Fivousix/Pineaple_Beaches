@@ -14,6 +14,7 @@ class LoginForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.setErrorArray = this.setErrorArray.bind(this);
     }
 
     // Once the user has been authenticated, redirect to the Profile page
@@ -50,6 +51,17 @@ class LoginForm extends React.Component {
         this.props.login(user);
     }
 
+    // Set error array to change length of form height
+    setErrorArray() {
+        let errorArray = [];
+
+        Object.keys(this.state.errors).map((error) => (
+            errorArray.push(this.state.errors[error])
+        ))
+
+        return errorArray;
+    }
+
     // Render the session errors if there are any
     renderErrors() {
         return (
@@ -64,41 +76,78 @@ class LoginForm extends React.Component {
     }
 
     render() {
-        return (
-            <div className="login-content-container">
-                <LogoNav />
-                <div className="login-form-container">
-                    <form className="login-form" onSubmit={this.handleSubmit}>
-                        <div className="l-form-content">
-                            <Link className="back-arrow" to="/">&#8592;</Link>
-                            <h1 className="login-label">Log In</h1>
-                            <br/>
-                            <input className="login-input" type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                placeholder="Username"
-                            />
-                            <br />
-                            <input className="login-input" type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                placeholder="Password"
-                            />
-                            <br />
-                            <input className="login-submit" type="submit" value={this.props.formType} />
-                            <br />
-                            <div className="login-bottom-content">
-                                <h3 className="no-account">Don't have an account?</h3>
-                                <Link className="to-signup" to="/signup">Sign Up Here!</Link>
+        if (this.setErrorArray().length > 0) {
+            return (
+                <div className="login-content-container">
+                    <LogoNav />
+                    <div className="login-form-container">
+                        <form className="login-form-errors" onSubmit={this.handleSubmit}>
+                            <div className="l-form-content">
+                                <Link className="back-arrow" to="/">&#8592;</Link>
+                                <h1 className="login-label">Log In</h1>
+                                <br/>
+                                <input className="login-input" type="text"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    placeholder="Username"
+                                />
+                                <br />
+                                <input className="login-input" type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    placeholder="Password"
+                                />
+                                <br />
+                                <input className="login-submit" type="submit" value={this.props.formType} />
+                                <br />
+                                <div className="login-bottom-content">
+                                    <h3 className="no-account">Don't have an account?</h3>
+                                    <Link className="to-signup" to="/signup">Sign Up Here!</Link>
+                                </div>
+                                <br/>
+                                {this.renderErrors()}
                             </div>
-                            <br/>
-                            {this.renderErrors()}
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                    <h1 className="trade-mark-sessions">®</h1>
                 </div>
-                <h1 className="trade-mark-sessions">®</h1>
-            </div>
-        );
+            );
+        } else {
+            return (
+                <div className="login-content-container">
+                    <LogoNav />
+                    <div className="login-form-container">
+                        <form className="login-form" onSubmit={this.handleSubmit}>
+                            <div className="l-form-content">
+                                <Link className="back-arrow" to="/">&#8592;</Link>
+                                <h1 className="login-label">Log In</h1>
+                                <br/>
+                                <input className="login-input" type="text"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    placeholder="Username"
+                                />
+                                <br />
+                                <input className="login-input" type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    placeholder="Password"
+                                />
+                                <br />
+                                <input className="login-submit" type="submit" value={this.props.formType} />
+                                <br />
+                                <div className="login-bottom-content">
+                                    <h3 className="no-account">Don't have an account?</h3>
+                                    <Link className="to-signup" to="/signup">Sign Up Here!</Link>
+                                </div>
+                                <br/>
+                            </div>
+                        </form>
+                    </div>
+                    <h1 className="trade-mark-sessions">®</h1>
+                </div>
+            );
+        }
     }
 }
 

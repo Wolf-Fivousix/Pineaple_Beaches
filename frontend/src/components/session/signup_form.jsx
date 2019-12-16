@@ -13,9 +13,8 @@ class SignupForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.renderErrors = this.renderErrors.bind(this);
-        this.clearErrors = false;
         this.renderErrors = this.renderErrors.bind(this);
+        this.setErrorArray = this.setErrorArray.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -48,6 +47,16 @@ class SignupForm extends React.Component {
         this.props.signup(user, this.props.history);
     }
     
+    // Set error array to change length of form height
+    setErrorArray() {
+        let errorArray = [];
+
+        Object.keys(this.state.errors).map((error) => (
+            errorArray.push(this.state.errors[error])
+        ))
+
+        return errorArray;
+    }
 
     renderErrors() {
         return (
@@ -62,47 +71,88 @@ class SignupForm extends React.Component {
     }
 
     render() {
-       
-        return (
-            <div className="signup-content-container">
-                <LogoNav />
-                <div className="signup-form-container">
-                    <form className="signup-form" onSubmit={this.handleSubmit}>
-                        <div className="s-form-content">
-                            <Link className="back-arrow" to="/">&#8592;</Link>
-                            <h1 className="signup-label">Sign Up</h1>
-                            <br/>
-                            <input className="signup-input" type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                placeholder="Username"
-                            />
-                            <br />
-                            <input className="signup-input" type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                placeholder="Password"
-                            />
-                            <br />
-                            <input className="signup-input" type="password"
-                                value={this.state.password2}
-                                onChange={this.update('password2')}
-                                placeholder="Confirm Password"
-                            />
-                            <br />
-                            <input className="signup-submit" type="submit" value="Sign Up" />
-                            <div className="signup-bottom-content">
-                                <h3 className="already-account">Already have an account?</h3>
-                                <Link className="to-login" to="/login">Log In Here!</Link>
+        if (this.setErrorArray().length > 0) {
+            return (
+                <div className="signup-content-container">
+                    <LogoNav />
+                    <div className="signup-form-container">
+                        <form className="signup-form-errors" onSubmit={this.handleSubmit}>
+                            <div className="s-form-content">
+                                <Link className="back-arrow" to="/">&#8592;</Link>
+                                <h1 className="signup-label">Sign Up</h1>
+                                <br/>
+                                <input className="signup-input" type="text"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    placeholder="Username"
+                                />
+                                <br />
+                                <input className="signup-input" type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    placeholder="Password"
+                                />
+                                <br />
+                                <input className="signup-input" type="password"
+                                    value={this.state.password2}
+                                    onChange={this.update('password2')}
+                                    placeholder="Confirm Password"
+                                />
+                                <br />
+                                <input className="signup-submit" type="submit" value="Sign Up" />
+                                <div className="signup-bottom-content">
+                                    <h3 className="already-account">Already have an account?</h3>
+                                    <Link className="to-login" to="/login">Log In Here!</Link>
+                                </div>
+                                <br/>
+                                {this.renderErrors()}
                             </div>
-                            <br/>
-                            {this.renderErrors()}
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                    <h1 className="trade-mark-sessions">®</h1>
                 </div>
-                <h1 className="trade-mark-sessions">®</h1>
-            </div>
-        );
+            );
+        } else {
+            return (
+                <div className="signup-content-container">
+                    <LogoNav />
+                    <div className="signup-form-container">
+                        <form className="signup-form" onSubmit={this.handleSubmit}>
+                            <div className="s-form-content">
+                                <Link className="back-arrow" to="/">&#8592;</Link>
+                                <h1 className="signup-label">Sign Up</h1>
+                                <br/>
+                                <input className="signup-input" type="text"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    placeholder="Username"
+                                />
+                                <br />
+                                <input className="signup-input" type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    placeholder="Password"
+                                />
+                                <br />
+                                <input className="signup-input" type="password"
+                                    value={this.state.password2}
+                                    onChange={this.update('password2')}
+                                    placeholder="Confirm Password"
+                                />
+                                <br />
+                                <input className="signup-submit" type="submit" value="Sign Up" />
+                                <div className="signup-bottom-content">
+                                    <h3 className="already-account">Already have an account?</h3>
+                                    <Link className="to-login" to="/login">Log In Here!</Link>
+                                </div>
+                                <br/>
+                            </div>
+                        </form>
+                    </div>
+                    <h1 className="trade-mark-sessions">®</h1>
+                </div>
+            );
+        }
     }
 }
 
