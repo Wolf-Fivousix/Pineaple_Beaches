@@ -13,7 +13,7 @@ class GoogleApi extends React.Component {
         }
 
         // binding this to event-handler functions
-        // this.onMarkerClick = this.onMarkerClick.bind(this);
+        this.onMarkerClick = this.onMarkerClick.bind(this);
         this.onMapClick = this.onMapClick.bind(this);
         this.displayMarkers = this.displayMarkers.bind(this);
     }
@@ -21,12 +21,17 @@ class GoogleApi extends React.Component {
     componentDidMount() {
         this.props.fetchAllBeaches();
     }
-    // onMarkerClick = (props, marker, e) => {
-    //     this.setState({
-    //         selectedPlace: props,
-    //         activeMarker: marker,
-    //     });
-    // }
+    onMarkerClick = (props, marker, e) => {
+        this.setState({
+            selectedPlace: props,
+            activeMarker: marker,
+        });
+    //   debugger
+      console.log('Go to the marker post page')
+        window.location = `/beaches/${props.id}`;
+
+      
+    }
 
     onMapClick = (props) => {
         this.setState({
