@@ -56,6 +56,7 @@ class BeachShow extends React.Component {
         if (this.props.beach) {
             beach_id = this.props.beach._id
         }
+        let beachName = this.state.name === "" ? "beachHolder" : this.state.name;
 
         if (this.props.loggedIn) {
             return (
@@ -93,6 +94,7 @@ class BeachShow extends React.Component {
                 <div className="beach-show-container">
                     <ReviewNavbarContainer/>
                     <div className="detail-center">
+                        <img src={require(`../../images/${beachName}.jpg`)} alt="beachImage" className="miniImage" />
                         <div className="beach-container">
                             <div className="beach-name-container">
                                 <h1 className="beach-show-location">{this.state.location} - </h1>
