@@ -62,6 +62,9 @@ class BeachShow extends React.Component {
             return (
                 <div className="beach-show-container">
                     <ReviewNavbarContainer/>
+                    <div className="detail-image">
+                        <img src={require(`../../images/${beachName}.jpg`)} alt="beachImage" className="miniImage" />
+                    </div>
                     <div className="detail-center">
                         <div className="beach-container">
                             <div className="beach-name-container">
@@ -93,8 +96,10 @@ class BeachShow extends React.Component {
             return (
                 <div className="beach-show-container">
                     <ReviewNavbarContainer/>
-                    <div className="detail-center">
+                    <div className="detail-image">
                         <img src={require(`../../images/${beachName}.jpg`)} alt="beachImage" className="miniImage" />
+                    </div>
+                    <div className="detail-center">
                         <div className="beach-container">
                             <div className="beach-name-container">
                                 <h1 className="beach-show-location">{this.state.location} - </h1>
