@@ -53,7 +53,6 @@ export const fetchUserReviews = id => dispatch => (
 )
 
 export const composeReview = data => dispatch => {
-    // debugger
     return(
     writeReview(data)
         .then(review => dispatch(receiveNewReview(review)))

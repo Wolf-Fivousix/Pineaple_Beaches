@@ -122,17 +122,11 @@
 /* Hover Changes */
 
 .review-form, .ul-reviews, .beach-container,
-.no-r-title, .all-r-title, .needlog-container,
-.login-form, .signup-form {
+.needlog-container, .login-form, .signup-form {
     transition: 1s;
 }
 
 .review-form:hover, .ul-reviews:hover,
-.no-r-title:hover, .all-r-title:hover,
 .needlog-container:hover {
     background-color: rgb(188, 255, 245);
-}
-
-.single-review:hover {
-    background-color: rgb(217, 183, 255);
 }
