@@ -15,6 +15,18 @@ class SignupForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.setErrorArray = this.setErrorArray.bind(this);
+        this.demoUser = this.demoUser.bind(this);
+    }
+
+    demoUser(e) {
+        e.preventDefault();
+
+        const demo = {
+            username: "DemoUser",
+            password: "password"
+        }
+
+        this.props.demoUser(demo);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -103,6 +115,7 @@ class SignupForm extends React.Component {
                                 <div className="signup-bottom-content">
                                     <h3 className="already-account">Already have an account?</h3>
                                     <Link className="to-login" to="/login">Log In Here!</Link>
+                                    <button className="demo-but" onClick={this.demoUser}>Demo Login</button>
                                 </div>
                                 <br/>
                                 {this.renderErrors()}
@@ -144,6 +157,7 @@ class SignupForm extends React.Component {
                                 <div className="signup-bottom-content">
                                     <h3 className="already-account">Already have an account?</h3>
                                     <Link className="to-login" to="/login">Log In Here!</Link>
+                                    <button className="demo-but" onClick={this.demoUser}>Demo Login</button>
                                 </div>
                                 <br/>
                             </div>
