@@ -37,7 +37,6 @@ module.exports = function validateBeachInput(data) {
     // TEMPERATURE
     data.temperature = typeof data.temperature === "number" ? data.temperature : "";
     // Make sure this actually worked.
-    debugger;
     if (Validator.isEmpty(data.temperature)) {
         errors.temperature = "It HAS a temperature, give it!";
     }

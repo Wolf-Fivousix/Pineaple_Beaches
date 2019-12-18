@@ -23,11 +23,11 @@ class SearchBar extends React.Component {
     }
 
     clearButton() {
-        console.log(this.state);
         this.props.fetchAllBeaches();
         this.setState({ search: "" });
         document.getElementById("searchBar").value = "";
     }
+    
     render() {
         
         return (
