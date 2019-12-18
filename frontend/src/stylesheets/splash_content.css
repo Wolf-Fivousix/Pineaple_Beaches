@@ -20,3 +20,15 @@
 .trade-mark-sessions {
     margin-top: 250px;
 }
+
+.miniImage {
+    width: 100px;
+    height: auto;
+    margin-left: 3px;
+    margin-right: 10px
+}
+
+.picTitleAligner {
+    display: flex;
+    align-content: space-between;
+}

@@ -8,6 +8,15 @@
     align-items: center;
 }
 
+.detail-center {
+    flex-flow: column;
+}
+
+.detail-center img {
+    width: 516px;
+    margin-top: 30px;
+}
+
 .beach-container {
     justify-content: center;
     margin-top: 35px;
