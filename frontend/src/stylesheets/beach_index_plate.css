@@ -55,10 +55,7 @@
 }
 
 .search-bar-container {
-    border-right: 4px dotted rgb(6, 18, 22);
-    padding-right: 64px;
     width: 50%;
-    margin-right: 10px;
 }
 
 .search-bar-form {

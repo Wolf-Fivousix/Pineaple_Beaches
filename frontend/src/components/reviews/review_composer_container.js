@@ -3,7 +3,6 @@ import { composeReview } from '../../actions/review_actions';
 import ReviewCompose from './review_compose';
 
 const mSTP = (state,ownProps) => {
-    // console.log(ownProps)
     return ({
         currentUser: state.session.user,
         currentBeach: ownProps.beach_id,

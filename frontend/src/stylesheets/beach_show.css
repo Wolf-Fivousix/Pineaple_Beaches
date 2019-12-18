@@ -20,7 +20,7 @@
 .beach-container {
     justify-content: center;
     margin-top: 35px;
-    background-color: rgb(202, 255, 223);
+    background-color: rgb(194, 255, 218);
     box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px;
     width: 680px;
     border-radius: 3px;
@@ -28,10 +28,6 @@
     padding-right: 6px;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.beach-container:hover {
-    background-color: rgb(170, 253, 204);
 }
 
 .beach-name-container, .beach-detail-container {

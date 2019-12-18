@@ -15,6 +15,18 @@ class LoginForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
         this.setErrorArray = this.setErrorArray.bind(this);
+        this.demoUser = this.demoUser.bind(this);
+    }
+
+    demoUser(e) {
+        e.preventDefault();
+
+        const demo = {
+            username: "DemoUser",
+            password: "password"
+        }
+
+        this.props.demoUser(demo);
     }
 
     // Once the user has been authenticated, redirect to the Profile page
@@ -65,7 +77,7 @@ class LoginForm extends React.Component {
     // Render the session errors if there are any
     renderErrors() {
         return (
-            <ul>
+            <ul className="error-ul">
                 {Object.keys(this.state.errors).map((error, i) => (
                     <li className="error-login" key={`error-${i}`}>
                         {this.state.errors[error]}
@@ -103,6 +115,7 @@ class LoginForm extends React.Component {
                                 <div className="login-bottom-content">
                                     <h3 className="no-account">Don't have an account?</h3>
                                     <Link className="to-signup" to="/signup">Sign Up Here!</Link>
+                                    <button className="demo-but" onClick={this.demoUser}>Demo Login</button>
                                 </div>
                                 <br/>
                                 {this.renderErrors()}
@@ -139,6 +152,7 @@ class LoginForm extends React.Component {
                                 <div className="login-bottom-content">
                                     <h3 className="no-account">Don't have an account?</h3>
                                     <Link className="to-signup" to="/signup">Sign Up Here!</Link>
+                                    <button className="demo-but" onClick={this.demoUser}>Demo Login</button>
                                 </div>
                                 <br/>
                             </div>
