@@ -16,6 +16,12 @@ const ReviewSchema = new Schema({
         type: String,
         required: true
     },
+
+    author: {
+        type: String,
+        references: "users"
+    },
+
     date: {
         type: Date,
         default: Date.now

@@ -6,26 +6,23 @@ class ReviewCompose extends React.Component {
         super(props);
 
         this.state = {
-            post:"",
-            newReview:""
+            post: ""
         }
         
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentWillReceiveProps(nextProps) {
-        // this.setState( {newReview: nextProps.newReview.post})
-    }
-
     handleSubmit(e) {
         e.preventDefault();
+
         let review = {
             post: this.state.post,
-            beach: this.props.currentBeach
+            beach: this.props.currentBeach,
+            author: this.props.currentUser.username
         };
     
         this.props.composeReview(review);
-        this.setState({post: ''})
+        this.setState({post: ""})
     }
 
     update() {
@@ -35,6 +32,7 @@ class ReviewCompose extends React.Component {
     }
 
     render() {
+        debugger
         return (
             <div className="review-form-container">
                 <form className="review-form" onSubmit={this.handleSubmit}>

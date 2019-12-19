@@ -10,6 +10,10 @@ const ReviewJoinsSchema = new Schema({
         type: Schema.Types.ObjectId,
         reference: "beaches"
     },
+    author: {
+        type: String,
+        reference: "users"
+    },
     date: {
         type: Date,
         default: Date.now
