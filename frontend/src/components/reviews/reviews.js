@@ -8,7 +8,7 @@ class Review extends React.Component {
 
         this.state = {
             reviews: [],
-            user: this.props.currentUser.username,
+            user: ""
         }
         debugger
     }
@@ -31,7 +31,7 @@ class Review extends React.Component {
     }
 
     render() {
-        if (Object.entries(this.state.reviews).length === 0) {
+        if (Object.values(this.state.reviews).length === 0) {
             return (
                 <div className="no-reviews-container">
                     <h1 className="no-r-title">No Reviews at the moment</h1>
