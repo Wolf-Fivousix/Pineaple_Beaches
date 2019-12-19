@@ -7,8 +7,10 @@ class Review extends React.Component {
         super(props);
 
         this.state = {
-            reviews: []
+            reviews: [],
+            user: this.props.currentUser.username,
         }
+        debugger
     }
 
     componentWillMount() {
@@ -44,7 +46,10 @@ class Review extends React.Component {
                     <div className="ul-r-container">
                         <ul className="ul-reviews">
                             {Object.keys(this.state.reviews).map(review => (
-                                <ReviewBox key={review} post={this.state.reviews[review].post} />
+                                <ReviewBox key={review} 
+                                post={this.state.reviews[review].post}
+                                username={this.state.user}
+                                />
                             ))}
                         </ul>
                     </div>

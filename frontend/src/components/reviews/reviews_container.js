@@ -6,6 +6,7 @@ const mSTP = (state,ownProps) => {
     return ({
         // beachReviews: Object.values(state.reviews.beach),
         // reviews: Object.values(state.entities.reviews.beach),
+        currentUser: state.session.user,
         reviews: state.entities.reviews,
         beach: ownProps.beach_id
     });
