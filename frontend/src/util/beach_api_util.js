@@ -14,7 +14,7 @@ export const fetchBeachById = (beachId) => (
 );
 
 export const updateBeachTemperature = ({ _id, lat, lon }) => (
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherAPIKey}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherAPIKey}`)
         .then(weatherData => {
                     axios.patch(`/api/beaches/${_id}`, {
                         temperature: weatherData.data.main.temp,
