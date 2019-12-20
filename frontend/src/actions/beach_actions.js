@@ -54,7 +54,11 @@ export const updateBeachTemperature = (payload) => dispatch => (
         .catch(errors => console.log(errors))
 );
 
-// Helper methods to format the payload.
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//// Helper methods to format the payload.
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
 function formatDataAsIdKeys(payload) {
     const ids = payload.data.map(beach => beach._id);
     const beaches = { };

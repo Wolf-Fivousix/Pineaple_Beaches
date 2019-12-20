@@ -10,7 +10,6 @@ class Review extends React.Component {
             reviews: [],
             user: ""
         }
-        debugger
     }
 
     componentWillMount() {

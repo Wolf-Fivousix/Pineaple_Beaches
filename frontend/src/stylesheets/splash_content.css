@@ -31,4 +31,5 @@
 .picTitleAligner {
     display: flex;
     align-content: space-between;
+    height: 70px;
 }
