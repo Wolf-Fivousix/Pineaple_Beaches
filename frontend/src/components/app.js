@@ -9,6 +9,7 @@ import ReviewComposeContainer from './reviews/review_composer_container';
 import ProfileContainer from './profile/profile_container';
 import Modal from './modal/modal';
 import BeachShowContainer from "./beaches/beach_show_container";
+import Footer from "./footer/developers";
 
 const App = () => (
     <div className="app-container">
@@ -21,6 +22,7 @@ const App = () => (
             <ProtectedRoute exact path="/new_review" component={ReviewComposeContainer} />
             <Route path="/beaches/:beach_id" component={BeachShowContainer} />
         </Switch>
+        <Footer />
     </div>
 );
 
