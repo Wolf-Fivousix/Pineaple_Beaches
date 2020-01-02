@@ -6,3 +6,4 @@ import './splash_content.css';
 import './reviews.css';
 import './beach_show.css';
 import './profile.css';
+import "./footer.css";
