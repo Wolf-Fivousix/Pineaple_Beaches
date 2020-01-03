@@ -2,4 +2,40 @@
     position: fixed;
     bottom: 0px;
     left: 0px;
+    z-index: 2;
+    background-color: rgb(97, 196, 230);
+    width: 100%;
+}
+
+.developerNames {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.amazingDev {
+    background-color: rgb(97, 196, 230);
+    cursor: pointer;
+    height: 90px;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amazingDev:hover {
+    background-color: rgb(32, 164, 207);
+}
+
+.onlineProfilesPannel {
+    background-color: rgb(97, 196, 230);
+    border: 3px dotted purple;
+    position: absolute;
+    top: 0px;
+    transition: transform 0.4s ease-out;
+    z-index: -1;
+}
+
+.slideIn {
+    transform: translateY(-80px);
 }
