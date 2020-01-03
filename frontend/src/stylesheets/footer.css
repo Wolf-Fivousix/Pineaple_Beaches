@@ -28,14 +28,24 @@
 }
 
 .onlineProfilesPannel {
-    background-color: rgb(97, 196, 230);
-    border: 3px dotted purple;
+    background-color: rgb(32, 164, 207);
     position: absolute;
     top: 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.4s ease-out;
     z-index: -1;
 }
 
 .slideIn {
-    transform: translateY(-80px);
+    transform: translateY(-190px);
+}
+
+.linkedInLogo,
+.gitHubLogo,
+.angelListLogo {
+    height: 60px;
+    /* fill: black; */
 }
