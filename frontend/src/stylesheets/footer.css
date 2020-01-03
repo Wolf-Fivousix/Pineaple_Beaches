@@ -31,6 +31,11 @@
     transform: translateY(-300px);
 }
 
+.amazingDevName {
+    font-size: 32px;
+    font-weight: bold;
+}
+
 .onlineProfilesPannel {
     background-color: rgb(32, 164, 207);
     position: absolute;
@@ -48,5 +53,5 @@
 .angelListLogo {
     height: 60px;
     fill: rgb(255, 183, 50);
-    margin: 20px;
+    margin: 20px 80px;
 }
