@@ -27,6 +27,10 @@
     background-color: rgb(32, 164, 207);
 }
 
+.amazingDev:hover ul {
+    transform: translateY(-300px);
+}
+
 .onlineProfilesPannel {
     background-color: rgb(32, 164, 207);
     position: absolute;
@@ -39,13 +43,10 @@
     z-index: -1;
 }
 
-.slideIn {
-    transform: translateY(-190px);
-}
-
 .linkedInLogo,
 .gitHubLogo,
 .angelListLogo {
     height: 60px;
-    /* fill: black; */
+    fill: rgb(255, 183, 50);
+    margin: 20px;
 }
