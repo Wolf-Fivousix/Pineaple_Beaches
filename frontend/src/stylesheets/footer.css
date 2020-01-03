@@ -1,9 +1,14 @@
+html {
+    --bg-body: rgb(255, 255, 230);
+    --bg-hover: rgb(226, 255, 250);
+}
+
 .developersFooter {
     position: fixed;
     bottom: 0px;
     left: 0px;
     z-index: 2;
-    background-color: rgb(97, 196, 230);
+    background-color: var(--bg-body);
     width: 100%;
 }
 
@@ -14,9 +19,9 @@
 }
 
 .amazingDev {
-    background-color: rgb(97, 196, 230);
+    background-color: var(--bg-body);
     cursor: pointer;
-    height: 90px;
+    height: 45px;
     width: 33%;
     display: flex;
     align-items: center;
@@ -24,24 +29,24 @@
 }
 
 .amazingDev:hover {
-    background-color: rgb(32, 164, 207);
+    background-color: var(--bg-hover);
 }
 
 .amazingDev:hover ul {
-    transform: translateY(-300px);
+    transform: translateY(-80px);
 }
 
 .amazingDevName {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .onlineProfilesPannel {
-    background-color: rgb(32, 164, 207);
+    background-color: var(--bg-hover);
     position: absolute;
     top: 0px;
     display: flex;
-    flex-flow: column;
+    /* flex-flow: column; */
     align-items: center;
     justify-content: center;
     transition: transform 0.4s ease-out;
@@ -52,6 +57,14 @@
 .gitHubLogo,
 .angelListLogo {
     height: 60px;
-    fill: rgb(255, 183, 50);
-    margin: 20px 80px;
+    fill: rgb(97, 196, 230);
+    margin: 10px 20px;
+}
+
+.footerDivisor {
+    width: 3px;
+    height: 30px;
+    background-color: green;
+    border-radius: 200px;
+    opacity: 0.1;
 }
