@@ -1,0 +1,70 @@
+html {
+    --bg-body: rgb(255, 255, 230);
+    --bg-hover: rgb(226, 255, 250);
+}
+
+.developersFooter {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+    background-color: var(--bg-body);
+    width: 100%;
+}
+
+.developerNames {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.amazingDev {
+    background-color: var(--bg-body);
+    cursor: pointer;
+    height: 45px;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amazingDev:hover {
+    background-color: var(--bg-hover);
+}
+
+.amazingDev:hover ul {
+    transform: translateY(-80px);
+}
+
+.amazingDevName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.onlineProfilesPannel {
+    background-color: var(--bg-hover);
+    position: absolute;
+    top: 0px;
+    display: flex;
+    /* flex-flow: column; */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease-out;
+    z-index: -1;
+}
+
+.linkedInLogo,
+.gitHubLogo,
+.angelListLogo {
+    height: 60px;
+    fill: rgb(97, 196, 230);
+    margin: 10px 20px;
+}
+
+.footerDivisor {
+    width: 3px;
+    height: 30px;
+    background-color: green;
+    border-radius: 200px;
+    opacity: 0.1;
+}
