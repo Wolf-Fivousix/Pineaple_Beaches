@@ -1,23 +1,37 @@
 # [Pineapple Beaches](https://pineapple-beaches.herokuapp.com/)
+![](images/pineappleBeaches.gif)
+Pineapple Beaches is a website where users can interact with posts and beaches to understand more information about local or travel locations which involve beaches. With real time weather data provided by a third party Web API.
 
-Pineapple Beaches is a website where users can interact with posts and beaches to understand more information about local or travel locations which involve beaches. This project uses **MongoDb, Express, React, Redux, and Node.JS** for the framework.
+Developed by: [Claudius Solomon](https://github.com/clauddyf), [Diego Bueno](https://github.com/Wolf-Fivousix), [Nathan Reinhardt](https://github.com/Ticonderago)
 
-This project was built and designed within a 5 day period by a team of three. We do plan on adding more to the project over time.
+## Table of Contents
+* [Technologies](#technologies)
+* [Features](#features)
+* [Code Snipets](#code-snipets)
+* [Screenshots](#screenshots)
 
-[Claudius](https://github.com/clauddyf)
+## Technologies
+* JavaScript
+* React
+* Redux
+* Node.js
+* Express.js
+* MongoDB
+* Heroku
+* JSON
+* CSS3
+* HTML5
 
-[Diego Francisco](https://github.com/Wolf-Fivousix)
-
-[Nathan Reinhardt](https://github.com/Ticonderago)
-
-### Features
+## Features
 
  * Secure backend to frontend with user authentication using BCrypt.
  * Beaches are displayed on the homepage and marked on the google map.
  * Google Maps Api to see where a beach is located relative to its city.
  * Registered users can review a beach.
+ * Real time weather data fetching.
  
- #### Web Weather API with CORS protection
+## Code Snipets
+ ### Web Weather API with CORS protection
  Leveraging [Open Weather](https://openweathermap.org/) API we can provide real time weather data anywhere in the world. In order to balance server load and the most recent data, we concluded that an update every hour sufice the needs for this project. By taking the difference between the last update of our database and the current time we decide if the call should be made. If it happens, we utilize a Promise and local state update to quickly display the updated information.
  ```JavaScript
  updateWeatherData() {
@@ -50,18 +64,9 @@ export const updateBeachTemperature = ({ _id, lat, lon }) => (
 ));
 ```
  
-### Screenshots
+## Screenshots
 ![](images/screenshot1.jpeg)
 
 ![](images/screenshot2.jpeg)
 
 ![](images/screenshot3.jpeg)
-
-### Possible Future Features
-
-Incoming Updates:
-
- * Style the individual beach and post/review pages.
- * Ability to have images inside the project.
- * Include likes and follows for beaches.
- * More data for beaches
