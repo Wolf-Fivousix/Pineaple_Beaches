@@ -26,9 +26,9 @@ Developed by: [Claudius Solomon](https://github.com/clauddyf), [Diego Bueno](htt
  * Real time weather data fetching.
  
  ### User Authentication with BCrypt
- BCrypt is used to make sure that user's password information is secure and is the hardest to reverse the encryption of the passwords. Using this with the login method is really important so user's can have their personal profiles and reviews to keep track of.
+ BCrypt is used to make sure that user's password information is secure and is the hardest to reverse the encryption of the passwords. Using this with the login method is really important so user's can have their personal profiles and reviews to keep track of. Profiles can be accessed when you log in and at the top right you click on your name to see your profile. The profile page also shows all of the users reviews that they have posted on beach pages.
  
-
+![](images/pineapplelogin.gif)
  
  ```JavaScript
  const newUser = new User({
@@ -59,7 +59,7 @@ Developed by: [Claudius Solomon](https://github.com/clauddyf), [Diego Bueno](htt
  ### Search Bar & Results
  At the top of the homepage is a search bar to filter out all the available beaches on the website to find what you wanna look for. After finding what you want, click on the beach and you will be taken to the information about the beach with user reviews left in place. Using React framework to build the component out to be used in the Splash Component.
  
-
+![](images/searchpineapple.gif)
  
  ```JavaScript
  import React from "react";
@@ -125,7 +125,7 @@ export default SearchBar;
  ### Google Maps Api
  Used to keep track of locations of the beaches. When you wanna know where on a coast line a beach is, the google maps api lets you have markers in the specific cities that the beaches are located in.  We use react to map the markers onto the google map.
  
-
+![](images/googlemaps.gif)
  
  ```JavaScript
     displayMarkers = () => {
@@ -175,7 +175,7 @@ export default SearchBar;
  ### Beach Reviews
  Each Beach Page has user reviews below the information about the beach.  It is anonymous since we don't want bias currently on a small scale for the website.  As we grow the website in the future names will be present for the author of the review. Every beach can have infinite reviews. You have to be logged in to leave a review on a beach by signing up to the website.
  
-
+![](images/pineapplereviews.gif)
  
  ```JavaScript
 const mongoose = require("mongoose");
@@ -215,7 +215,7 @@ module.exports = Review;
  ### Web Weather API with CORS protection
  Leveraging [Open Weather](https://openweathermap.org/) API we can provide real time weather data anywhere in the world. In order to balance server load and the most recent data, we concluded that an update every hour sufice the needs for this project. By taking the difference between the last update of our database and the current time we decide if the call should be made. If it happens, we utilize a Promise and local state update to quickly display the updated information.
  
-
+![](images/pineappleweather.gif)
  
  ```JavaScript
  updateWeatherData() {
