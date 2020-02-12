@@ -4,7 +4,7 @@
 
 ![](images/pineappleBeaches.gif)
 
-Developed by: [Claudius Solomon](https://github.com/clauddyf), [Diego Bueno](https://github.com/Wolf-Fivousix), [Nathan Reinhardt](https://github.com/Ticonderago)
+Developed by: [Claudius Solomon](https://github.com/clauddyf), [Diego Bueno](https://github.com/Wolf-Fivousix), [Nathan Reinhardt](https://github.com/Nathan-Reinhardt)
 
 ## Technologies
 * JavaScript
